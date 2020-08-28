@@ -6,7 +6,7 @@
 
 1. 宏任务（Macro-Task）：参与事件循环的异步任务（别的线程里面完成的 -- 怎么理解？）
    + eg: I/O、request-Animation-Frame、set-Timeout、set-Interval、set-Immediate
-2. 微任务（Micro-Task）：不参与事件循环的["异步"](https://juejin.im/post/6844903877477662727)(假异步)任务 -（同一个事件循环中，比宏任务优先级高、主线程任务完成后立即执行， 没有在憋得线程里完成）
+2. 微任务（Micro-Task）：不参与事件循环的["异步"](https://juejin.im/post/6844903877477662727)(假异步)任务 -（同一个事件循环中，比宏任务优先级高、主线程任务完成后立即执行， 没有在别的线程里完成）
    + eg: process_next-Tick (node.js)、Mutation-Observer、Promise
 
 ## 拓展
