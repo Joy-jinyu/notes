@@ -35,4 +35,5 @@
 4. ### IDE环境配置
 
    + 安装flutter、dart插件
+   + [visual studio开发](https://flutter.io/using-ide-vscode/)
 
