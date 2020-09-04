@@ -35,5 +35,9 @@
 4. ### IDE环境配置
 
    + 安装flutter、dart插件
-   + [visual studio开发](https://flutter.io/using-ide-vscode/)
+   + [visual studio开发](https://flutter.io/using-ide-vscode/; https://flutter.dev/docs/development/tools/vs-code)
+     - 快捷键 Ctrl + Shift + P 调出 vs的命令行
+     - 输入 Flutter: New Project 然后enter确认
+     - 输入项目名称
+     - 选择项目路径
 
