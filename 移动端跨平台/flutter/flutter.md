@@ -34,10 +34,11 @@
 
 4. ### IDE环境配置
 
-   + 安装flutter、dart插件
+   + [power shell 5.1安装](https://docs.microsoft.com/zh-cn/powershell/scripting/windows-powershell/wmf/setup/install-configure?view=powershell-7)
+     -  $PSVersionTable 查看当前版本
    + [visual studio开发](https://flutter.io/using-ide-vscode/; https://flutter.dev/docs/development/tools/vs-code)
+     - 安装flutter、dart插件
      - 快捷键 Ctrl + Shift + P 调出 vs的命令行
      - 输入 Flutter: New Project 然后enter确认
      - 输入项目名称
      - 选择项目路径
-
