@@ -1,11 +1,16 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import { VueConstructor } from 'vue/types/umd'
+import Vuex from "vuex"
 
-Vue.use(Vuex);
+const createStore = async (Vue: VueConstructor) => {
+  Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
-});
+  const store = new Vuex.Store({
+    state: {},
+    mutations: {},
+    actions: {},
+    modules: {}
+  });
+  return store
+}
+
+export default createStore

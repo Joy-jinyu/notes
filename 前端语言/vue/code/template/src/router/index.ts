@@ -1,27 +1,24 @@
-import Vue from "vue";
 import VueRouter, { NavigationGuardNext, Route, RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
-// component: () =>
-//   import(/* webpackChunkName: "about" */ "../views/About.vue")
+import { VueConstructor } from 'vue/types/umd';
+import routeArray from './routes'
 
-Vue.use(VueRouter);
+const router = async (Vue: VueConstructor): Promise<VueRouter> => {
+  Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  }
-];
+  const routes = routeArray;
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
-});
+  const router = new VueRouter({
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes
+  });
 
-router.beforeEach((to: Route, from: Route, next: NavigationGuardNext) => {
-  next();
-});
+  router.beforeEach((to: Route, from: Route, next: NavigationGuardNext) => {
+    next();
+  });
 
-export default router;
+  return router;
+}
+
+export default router
+
