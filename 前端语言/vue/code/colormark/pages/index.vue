@@ -4,11 +4,8 @@
       <Logo />
       <h1 class="title">colormark</h1>
       <div class="links">
-        <nuxt-link to="./PC/home" rel="noopener noreferrer" class="button--green">
-          PC端
-        </nuxt-link>
-        <nuxt-link to="./H5" rel="noopener noreferrer" class="button--grey">
-          H5端
+        <nuxt-link to="./colorMark/home" rel="noopener noreferrer" class="button--green">
+          进入系统
         </nuxt-link>
       </div>
     </div>
