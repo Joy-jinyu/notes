@@ -2,11 +2,7 @@
   <div class="co_main">
     <!-- 轮播图部分 -->
     <div class="block">
-      <el-carousel trigger="click" height="350px">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3 class="small">{{ item }}</h3>
-        </el-carousel-item>
-      </el-carousel>
+      <color-swiper :height="'350px'" :swipers="[]"></color-swiper>
     </div>
     <!-- 主体内容板块 -->
     <div class="co_main_body">

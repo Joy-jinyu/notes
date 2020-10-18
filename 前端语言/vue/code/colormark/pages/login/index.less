@@ -1,0 +1,70 @@
+.outline {
+  border: 1px solid springgreen;
+}
+
+.login-page {
+  .backgroung-image("login/background.png");
+  width: 100vw;
+  height: 100vh;
+
+  .login-body {
+    position: absolute;
+    top: 3.29rem;
+    left: 3.29rem;
+
+    &__logo {
+      .outline;
+    }
+
+    &__action {
+      .outline;
+      border-radius: @basic-radius;
+      width: 3.74rem;
+      height: 4.38rem;
+      background-color: #ffffff;
+      padding: .36rem;
+      opacity: .8;
+
+      display: flex;
+      flex-flow: column;
+
+      > div {
+        display: inline-flex;
+      }
+
+      .action-title {
+        font-size: @basic-font-size;
+        color: @primary;
+        font-weight: 500;
+        line-height: 1.375;
+        text-align: center;
+      }
+
+      .action-first {
+        margin-top: @mx-distant;
+      }
+
+      .action-content {
+        margin-top: @sm-distant;
+
+        .verify {
+          cursor: pointer;
+        }
+      }
+
+      .action-agree {
+        margin-top: @sm-distant;
+        span {
+          color: #bcbcbc;
+          strong {
+            color: #333333;
+          }
+        }
+      }
+
+      > button {
+        margin-top: @sm-distant;
+      }
+    }
+  }
+}

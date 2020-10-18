@@ -17,7 +17,7 @@
           <ul class="header_right">
             <li>
               <el-input
-                v-model="searchData"
+                v-model="search"
                 placeholder="搜索"
                 suffix-icon="el-icon-search"
               >

@@ -2,7 +2,9 @@ export default {
     name: 'Header',
     data() {
         return {
-            searchData: '',
+            search: '',
         }
+    },
+    computed: {
     }
 }
