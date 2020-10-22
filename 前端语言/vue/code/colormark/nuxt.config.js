@@ -10,11 +10,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['element-ui/lib/theme-chalk/index.css', '@assets/css/global.less'],
+  // Global CSS (https://go.nuxtjs.dev/config-css) 与项目文件同步加载
+  css: ['element-ui/lib/theme-chalk/index.css', '@/css/global.less'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/index'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -42,5 +42,8 @@ export default {
       //   })
       // }
     },
+    styleResources: { //设置全局样式，会比项目文件预先加载 [https://github.com/nuxt/nuxt.js/tree/dev/examples/style-resources]
+      less: './css/mixins/index.less'
+    }
   },
 };

@@ -1,7 +1,7 @@
 export default {
+    name: 'Home',
     data() {
         return {
-            searchData: '',
             activeIndex: '1',
             contentList: [
                 {

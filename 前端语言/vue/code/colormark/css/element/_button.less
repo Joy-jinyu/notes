@@ -1,0 +1,41 @@
+.el-button--primary {
+  background-color: @primary;
+  border-color: @primary;
+
+  &:hover,
+  &:focus {
+    background-color: @light-primary;
+    border-color: @light-primary;
+  }
+
+
+  &:active,
+  &:visited {
+    background-color: @primary;
+    border-color: @primary;
+  }
+}
+
+.el-button {
+
+  &:hover,
+  &:focus {
+    color: @light-primary;
+    border-color: @light-primary;
+    background-color: #dcdfe6;
+  }
+
+
+  &:active,
+  &:visited {
+    color: @primary;
+    border-color: @primary;
+    background-color: #dcdfe6;
+  }
+
+  + .el-button {
+      margin-left: 0;
+  }
+}
+
+
