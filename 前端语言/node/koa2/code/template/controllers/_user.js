@@ -1,5 +1,4 @@
 const detail = (ctx, next) => {
-    console.log(ctx.request.params)
     ctx.response.body = {
         name: 'joy',
         description: 'a handsome boy'
