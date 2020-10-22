@@ -1,10 +1,11 @@
-const Koa = require('koa'), 
-KoaParser = require('koa-bodyparser'),
-createController = require('./controllers/index')
+const Koa = require('koa'),
+    cors = require('koa2-cors'),
+    KoaParser = require('koa-bodyparser'),
+    createController = require('./controllers/index')
 
-const app = new Koa(), 
-parser = KoaParser(),
-routes = createController()
+const app = new Koa(),
+    parser = KoaParser(),
+    routes = createController()
 
 /**
  * 中间件的演示，可忽略
@@ -17,7 +18,7 @@ app.use(async (ctx, next) => {
     await next()
 })
 
-
+app.use(cors())
 app.use(parser)
 app.use(routes)
 
