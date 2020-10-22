@@ -1,42 +1,70 @@
-.co_header {
-    height: 70px;
-    width: 100%;
-    line-height: 70px;
-    box-shadow: 0px 1px 0px 0px #ebebeb;
-    h1 {
-      width: 150px;
-      height: 100%;
-      font-size: 32px;
-      float: left;
-      margin-left: 3vw;
+.header {
+  height: .7rem;
+  width: 100%;
+  line-height: .7rem;
+  box-shadow: 0px 1px 0px 0px #ebebeb;
+  display: flex;
+
+  &-logo {
+    height: 100%;
+    font-size: .32rem;
+  }
+
+  &-menu {
+    height: 100%;
+    display: flex;
+    margin-left: .86rem;
+
+    li {
+      font-size: @mini-font-size;
+      padding: 0 @me-distant;
+      cursor: pointer;
     }
-    .header_view {
-      height: 100%;
-      float: left;
-      margin-left: 3vw;
-      li {
-        margin-left: 3vw;
-        display: inline-block;
+  }
+
+  &-action {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    .el-input {
+      width: 1.8rem;
+
+      /deep/.el-input__inner {
+        height: .34rem;
+        line-height: .34rem;
+        border-radius: @me-radius  !important;
       }
     }
-    .header_right {
-      height: 100%;
-      text-align: right;
-      li {
-        display: inline;
-        margin-right: 2vw;
-        display: inline-block;
-        /deep/.el-input__inner {
-          border-radius: 30px !important;
-        }
-        img {
-          width: 22px;
-          height: 24px;
-          vertical-align: middle;
-        }
-        .divideFlag {
-          margin: 0 1vw;
-        }
+
+    .el-button {
+      padding: .08rem .12rem;
+    }
+
+    > * {
+      margin-left: @lg-distant;
+    }
+
+    span {
+      font-size: @mini-font-size;
+      line-height: 1;
+      cursor: pointer;
+
+      &:last-child {
+        border-left: 1px solid @primary;
+        margin-left: 0;
       }
     }
+
+    .login {
+      padding: 0 @mx-distant;
+    }
+
+    > img {
+      width: .22rem;
+      height: .24rem;
+      cursor: pointer;
+    }
+  }
 }

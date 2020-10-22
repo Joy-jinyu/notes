@@ -1,106 +1,72 @@
 <template>
-  <div class="co_main">
+  <div class="home-page">
     <!-- 轮播图部分 -->
-    <div class="block">
-      <color-swiper :height="'350px'" :swipers="[]"></color-swiper>
+    <div class="swiper-body">
+      <color-swiper :height="'350px'" :swipers="swipers"></color-swiper>
     </div>
     <!-- 主体内容板块 -->
-    <div class="co_main_body">
-      <!-- 主体内容副内容板块 -->
-      <div class="co_main_recommend">
-        <ul>
-          <li class="recommend_li" style="background-color: skyblue">1</li>
-          <li class="recommend_li" style="background-color: lightblue">2</li>
-          <li class="recommend_li">3</li>
-          <li class="recommend_li" style="background-color: pink">4</li>
-          <li class="recommend_li">5</li>
-        </ul>
+    <div class="main-body">
+      <!-- 副内容 -->
+      <div class="recommend">
+        <img
+          :src="item.src"
+          v-for="(item, index) of recommends"
+          :key="vnodeKey('recommend', index)"
+        />
       </div>
-      <!-- 主体内容导航 -->
-      <div class="co_main_nav">
+      <!-- 导航 -->
+      <div class="nav">
+        <!-- 菜单项 -->
         <el-menu
-          :default-active="activeIndex"
+          :default-active="activeMenu"
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
         >
-          <el-menu-item index="1">所有领域</el-menu-item>
-          <el-menu-item index="2">平面设计</el-menu-item>
-          <el-menu-item index="3">数字艺术</el-menu-item>
-          <el-menu-item index="4">用户界面</el-menu-item>
-          <el-menu-item index="5">动态图像设计</el-menu-item>
-          <el-menu-item index="6">品牌推广</el-menu-item>
-          <el-menu-item index="7">工业设计</el-menu-item>
-          <el-menu-item index="8">摄影</el-menu-item>
-          <el-menu-item index="9">插画</el-menu-item>
-          <el-menu-item index="10">包装</el-menu-item>
-          <el-menu-item index="11">
+          <el-menu-item v-for="(item, index) of navMenus"  :index="vnodeIndex(index)" :key="vnodeKey('navMenu', index)" >
+            {{ item }}
+          </el-menu-item>
+        </el-menu>
+        <color-space />
+        <!-- 排序方式 -->
+        <el-menu
+          :default-active="activeSort"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+        >
+          <el-menu-item index="1">
             最新发布
             <i class="el-icon-arrow-down"></i>
           </el-menu-item>
-          <el-menu-item index="12">
+          <el-menu-item index="2">
             按推荐排列
             <i class="el-icon-arrow-down"></i>
           </el-menu-item>
         </el-menu>
       </div>
-      <!-- 导航内容展示区 -->
-      <div class="co_main_content">
-        <ul class="co_main_content_ul">
-          <li v-for="item in contentList" :key="item.id">
-            <img class="co_main_content_img" :src="item.contImg" alt="" />
-            <div class="co_main_content_c">
-              <h4>{{ item.title }}</h4>
-              <div>
-                <img :src="item.headImg" alt="" />
-                <span class="co_main_content_c_name">{{ item.name }}</span>
-                <span class="co_main_content_c_msg">
-                  <span>{{ item.time }}</span>
-                  <span><i class="el-icon-view"></i>{{ item.views }}</span>
-                  <span>
-                    <img
-                      src="@/assets/img/act_icon_like_default.png"
-                      alt=""
-                    />{{ item.like }}
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
+      <!-- 产品 -->
+      <div class="product">
+        <div class="product-list">
+          <color-product v-for="(item, index) in products" :product="item" :key="vnodeKey('product', index)">
+          </color-product>
+        </div>
         <div class="more">
           <a href="javascript:void(0)">更多精彩等你</a>
         </div>
       </div>
-      <!-- 主体内容下方占位区 -->
-      <div class="co_main_space">
+      <!-- 广告位 -->
+      <div class="advertisemnet">
+        <img :src="space" />
         <img :src="space" />
       </div>
       <!-- 主体内容推荐板块  使用上面的板块，内容控制为四个-->
-      <div class="co_main_content">
+      <div class="product">
         <p>为您推荐</p>
-        <ul class="co_main_content_ul">
-          <li v-for="item in forrecomendList" :key="item.id">
-            <img class="co_main_content_img" :src="item.contImg" alt="" />
-            <div class="co_main_content_c">
-              <h4>{{ item.title }}</h4>
-              <div>
-                <img :src="item.headImg" alt="" />
-                <span class="co_main_content_c_name">{{ item.name }}</span>
-                <span class="co_main_content_c_msg">
-                  <span>{{ item.time }}</span>
-                  <span><i class="el-icon-view"></i>{{ item.views }}</span>
-                  <span>
-                    <img
-                      src="@/assets/img/act_icon_like_default.png"
-                      alt=""
-                    />{{ item.like }}
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <div class="product-list">
+          <color-product v-for="(item, index) in recommendProducts" :product="item" :key="vnodeKey('recommendProduct', index)">
+          </color-product>
+        </div>
       </div>
     </div>
   </div>

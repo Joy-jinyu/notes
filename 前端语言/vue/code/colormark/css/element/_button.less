@@ -1,21 +1,3 @@
-.el-button--primary {
-  background-color: @primary;
-  border-color: @primary;
-
-  &:hover,
-  &:focus {
-    background-color: @light-primary;
-    border-color: @light-primary;
-  }
-
-
-  &:active,
-  &:visited {
-    background-color: @primary;
-    border-color: @primary;
-  }
-}
-
 .el-button {
 
   &:hover,
@@ -26,8 +8,7 @@
   }
 
 
-  &:active,
-  &:visited {
+  &:active {
     color: @primary;
     border-color: @primary;
     background-color: #dcdfe6;
@@ -35,6 +16,24 @@
 
   + .el-button {
       margin-left: 0;
+  }
+}
+
+.el-button--primary {
+  background-color: @primary;
+  border-color: @primary;
+
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+    background-color: @light-primary;
+    border-color: @light-primary;
+  }
+
+
+  &:active {
+    background-color: @primary;
+    border-color: @primary;
   }
 }
 
