@@ -1,6 +1,6 @@
 const purchase = (ctx, next) => {
     ctx.response.body = {
-        code: '30040010',
+        code: '30040013',
         message: '發送短訊驗證碼失敗',
         data: '',
         status: 200
