@@ -186,16 +186,6 @@ export default {
                     headImg: require('@/assets/img/act_icon_person_default.png'),
                     name: 'zhaoliu',
                 },
-                {
-                    id: 5,
-                    title: 'PlayStation APP用户界面重设计 | Redesign',
-                    time: '3天前',
-                    views: 300,
-                    like: 108,
-                    contImg: require('@/static/img/位图_8.png'),
-                    headImg: require('@/assets/img/act_icon_person_default.png'),
-                    name: 'zhaoliu',
-                },
             ],
         };
     },

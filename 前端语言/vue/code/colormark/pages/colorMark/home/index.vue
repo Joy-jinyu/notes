@@ -7,11 +7,11 @@
     <!-- 主体内容板块 -->
     <div class="main-body">
       <!-- 副内容 -->
-      <div class="recommend">
+      <div class="subContent">
         <img
           :src="item.src"
           v-for="(item, index) of recommends"
-          :key="vnodeKey('recommend', index)"
+          :key="vnodeKey('subContent', index)"
         />
       </div>
       <!-- 导航 -->
@@ -60,9 +60,9 @@
         <img :src="space" />
         <img :src="space" />
       </div>
-      <!-- 主体内容推荐板块  使用上面的板块，内容控制为四个-->
-      <div class="product">
-        <p>为您推荐</p>
+      <!-- 推荐板块 -->
+      <div class="recommend">
+        <label class="recommend-title">为您推荐</label>
         <div class="product-list">
           <color-product v-for="(item, index) in recommendProducts" :product="item" :key="vnodeKey('recommendProduct', index)">
           </color-product>

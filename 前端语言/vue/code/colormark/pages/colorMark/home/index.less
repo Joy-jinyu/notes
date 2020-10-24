@@ -12,12 +12,12 @@
     width: 100%;
 
     // 副内容板块
-    .recommend {
+    .subContent {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      
+
       img {
         flex: 0 0 auto;
         margin: @me-distant 0;
@@ -84,6 +84,31 @@
         flex: 0 0 auto;
         width: 49%;
         border-radius: @basic-radius;
+      }
+    }
+
+    .recommend {
+      margin: @sm-distant auto 0;
+      width: 100%;
+
+      &-title {
+        display: block;
+        font-size: @me--font-size;
+        font-weight: 600;
+        line-height: .3rem;
+        padding: @me-distant 0;
+        color: @primary;
+      }
+
+      .product-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+        .product-list__item {
+          width: 4.3rem;
+        }
       }
     }
   }
