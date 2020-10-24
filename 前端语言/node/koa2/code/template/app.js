@@ -1,12 +1,33 @@
 const Koa = require('koa'),
     cors = require('koa2-cors'),
     KoaParser = require('koa-bodyparser'),
-    createController = require('./controllers/index')
+    createController = require('./controllers/index'),
+    webpack = require('webpack'),
+    webpackDevMiddleware = require('koa-webpack-dev-middleware'),
+    webpackHotMiddleware = require('koa-webpack-hot-middleware'),
+    webpackConfig = require('./config/webpack.config'),
+    compiler = webpack(webpackConfig)
 
 const app = new Koa(),
     parser = KoaParser(),
     routes = createController()
 
+app.use(webpackDevMiddleware(compiler, {
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+    reload: true,
+    publicPath: webpackConfig.output.publicPath,
+    hot: true,
+    noInfo: false,
+    inline: true,
+    stats: {
+        cached: false,
+        colors: true
+    }
+}))
+
+app.use(webpackHotMiddleware(compiler))
 /**
  * 中间件的演示，可忽略
  */
