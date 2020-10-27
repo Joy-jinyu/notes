@@ -44,7 +44,7 @@
         </div>
 
         <div class="section-body">
-          
+          <component :is="showPage" :products="products" :fans-list="fansList"></component>
         </div>
       </section>
     </div>

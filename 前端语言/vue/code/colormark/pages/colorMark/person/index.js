@@ -1,5 +1,15 @@
+import PersonProduct from './components/product'
+import PersonFans from './components/fans'
+
+import productList from '@/assets/data/products'
+import fansList from '@/assets/data/fans'
 export default {
     name: 'Person',
+    components: {
+        // 产品类型的组件
+        PersonProduct,
+        PersonFans
+    },
     data() {
         return {
             // 选中的aside菜单
@@ -58,8 +68,17 @@ export default {
             // 激活的section菜单
             activeSection: '',
             // section的所有菜单项
-            sectionMenus: []
+            sectionMenus: [],
+            products: [],
+            fansList: [],
+            // 展示的组件
+            showPage: 'PersonFans',
         };
+    },
+    created() {
+        this.products = productList.splice(0, 9)
+        this.fansList = fansList
+        this.selectAside(this.asideMenus[0])
     },
     methods: {
         handleSelect() { },
@@ -67,7 +86,7 @@ export default {
         selectAside(menu) {
             this.activeAside = menu.code
             this.sectionMenus = menu.children
-            this.activeSection = this.selectSection(menu.children[0])
+            this.selectSection(menu.children[0])
         },
         // 选中了section菜单项目
         selectSection(menu) {

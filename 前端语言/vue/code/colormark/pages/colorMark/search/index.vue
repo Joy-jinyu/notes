@@ -59,7 +59,7 @@
           >
           </color-product>
         </div>
-        <div class="more">
+        <div class="more-btn">
           <a href="javascript:void(0)">更多精彩等你</a>
         </div>
       </div>
