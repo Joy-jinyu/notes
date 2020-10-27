@@ -4,9 +4,9 @@
     <h1 class="header-logo">COLORMARK</h1>
     <!-- 页头菜单 -->
     <ul class="header-menu">
-      <li>首页</li>
-      <li>发现</li>
-      <li>活动</li>
+      <li><nuxt-link to="./home">首页</nuxt-link></li>
+      <li><nuxt-link to="./search">发现</nuxt-link></li>
+      <li><nuxt-link to="./activity">活动</nuxt-link></li>
     </ul>
     <!-- 占位符 -->
     <color-space />
@@ -28,7 +28,23 @@
         上传作品
       </el-button>
       <span class="login">登录</span>
-      <span class="login">注册</span>
+      <span class="register">注册</span>
+      <el-dropdown trigger="click" placement="bottom-start">
+        <span class="user-logo">
+          <img src="@/static/img/位图_5.png" /><i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item icon="el-icon-plus">我的作品</el-dropdown-item>
+          <el-dropdown-item icon="el-icon-circle-plus">我的关注</el-dropdown-item>
+          <el-dropdown-item icon="el-icon-circle-plus-outline"
+            >我的收藏</el-dropdown-item
+          >
+          <el-dropdown-item icon="el-icon-check">个人资料</el-dropdown-item>
+          <el-dropdown-item icon="el-icon-circle-check"
+            >退出</el-dropdown-item
+          >
+        </el-dropdown-menu>
+      </el-dropdown>
     </div>
   </div>
 </template>

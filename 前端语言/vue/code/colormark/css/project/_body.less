@@ -1,0 +1,137 @@
+.color-page {
+  width: @home-body;
+  height: auto;
+  padding: @me-distant 0;
+  margin: 0 auto;
+
+  .swiper-body {
+    width: 100%;
+  }
+
+  .main-body {
+    width: 100%;
+
+    // 副内容板块
+    .subContent {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      img {
+        flex: 0 0 auto;
+        margin: @me-distant 0;
+        width: 2.59rem;
+        height: auto;
+        border-radius: @basic-radius;
+      }
+    }
+
+    //导航
+    .nav {
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+
+      .el-menu--horizontal {
+        .el-menu-item {
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+
+        >.el-menu-item.is-active {
+          border: transparent !important;
+        }
+      }
+    }
+
+    // 产品
+    .product {
+      margin: @sm-distant auto 0;
+      width: 100%;
+
+      .product-title {
+        display: block;
+        font-size: @me-font-size;
+        font-weight: 600;
+        line-height: .3rem;
+        padding: @me-distant 0;
+        color: @primary;
+      }
+
+      .product-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: auto;
+      }
+
+      // 点击显示更多按钮
+      .more-btn {
+        margin: @mx-distant auto 0;
+        width: 1.18rem;
+        height: 1.18rem;
+        background: #ffffff;
+        border: 1px solid #d8d8d8;
+        border-radius: 50%;
+        text-align: center;
+
+        a {
+          font-size: 12px;
+          font-family: PingFangSC, PingFangSC-Regular;
+          font-weight: 400;
+          color: #acacac;
+          line-height: 1.18rem;
+          display: block;
+        }
+      }
+
+      .el-pagination {
+        text-align: center;
+      }
+    }
+
+    // 广告位
+    .advertisemnet {
+      margin: @mx-distant auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        flex: 0 0 auto;
+        width: 49%;
+        border-radius: @basic-radius;
+      }
+    }
+
+    .recommend {
+      margin: @sm-distant auto 0;
+      width: 100%;
+
+      &-title {
+        display: block;
+        font-size: @me-font-size;
+        font-weight: 600;
+        line-height: .3rem;
+        padding: @me-distant 0;
+        color: @primary;
+      }
+
+      .product-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+
+        .product-list__item {
+          width: 4.3rem;
+        }
+      }
+    }
+  }
+}

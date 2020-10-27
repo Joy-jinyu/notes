@@ -1,0 +1,28 @@
+.search {
+  .search-body {
+    padding: @me-distant;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .el-autocomplete {
+      display: flex;
+      width: 3.8rem;
+
+      /deep/.el-input {
+
+        &__inner {
+          border-radius: @me-radius;
+        }
+
+        &__suffix {
+          right: 0;
+
+          button {
+            border-radius: @me-radius;
+          }
+        }
+      }
+    }
+  }
+}

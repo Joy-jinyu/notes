@@ -20,6 +20,12 @@
       font-size: @mini-font-size;
       padding: 0 @me-distant;
       cursor: pointer;
+
+      a {
+        color: @primary;
+        font-size: @mini-font-size;
+        font-weight: 400;
+      }
     }
   }
 
@@ -43,7 +49,7 @@
       padding: .08rem .12rem;
     }
 
-    > * {
+    >* {
       margin-left: @lg-distant;
     }
 
@@ -51,18 +57,29 @@
       font-size: @mini-font-size;
       line-height: 1;
       cursor: pointer;
-
-      &:last-child {
-        border-left: 1px solid @primary;
-        margin-left: 0;
-      }
     }
 
-    .login {
+    .login,
+    .register {
       padding: 0 @mx-distant;
     }
 
-    > img {
+    .register {
+      border-left: 1px solid @primary;
+      margin-left: 0;
+    }
+
+    .user-logo {
+      margin-right: @mx-distant;
+      img {
+        border-radius: 50%;
+        width: .3rem;
+        height: .3rem;
+        vertical-align: middle;
+      }
+    }
+
+    >img {
       width: .22rem;
       height: .24rem;
       cursor: pointer;

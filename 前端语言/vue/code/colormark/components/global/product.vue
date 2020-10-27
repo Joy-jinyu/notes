@@ -8,9 +8,9 @@
         <span class="detail-name">{{ product.name }}</span>
         <span class="detail-body">
           <span>{{ product.time }}</span>
-          <span><i class="detail-body__view"></i>{{ product.views }}</span>
+          <span><img src="@/assets/img/view.png" alt="" />{{ product.views }}</span>
           <span>
-            <img src="@/assets/img/act_icon_like_default.png" alt="" />{{
+            <img src="@/assets/img/like.png" alt="" />{{
               product.like
             }}
           </span>

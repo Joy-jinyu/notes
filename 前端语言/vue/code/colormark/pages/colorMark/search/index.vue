@@ -1,19 +1,18 @@
 <template>
-  <div class="color-page home">
+  <div class="color-page search">
     <!-- 轮播图部分 -->
-    <div class="swiper-body">
-      <color-swiper :height="'350px'" :swipers="swipers"></color-swiper>
+    <div class="search-body">
+      <el-autocomplete
+        v-model="search"
+        placeholder="请输入你要查找的内容"
+        :fetch-suggestions="querySuggestion"
+        @select="handleSelect"
+      >
+        <el-button slot="suffix" type="primary">搜索</el-button>
+      </el-autocomplete>
     </div>
     <!-- 主体内容板块 -->
     <div class="main-body">
-      <!-- 副内容 -->
-      <div class="subContent">
-        <img
-          :src="item.src"
-          v-for="(item, index) of recommends"
-          :key="vnodeKey('subContent', index)"
-        />
-      </div>
       <!-- 导航 -->
       <div class="nav">
         <!-- 菜单项 -->
@@ -23,7 +22,11 @@
           mode="horizontal"
           @select="handleSelect"
         >
-          <el-menu-item v-for="(item, index) of navMenus"  :index="vnodeIndex(index)" :key="vnodeKey('navMenu', index)" >
+          <el-menu-item
+            v-for="(item, index) of navMenus"
+            :index="vnodeIndex(index)"
+            :key="vnodeKey('navMenu', index)"
+          >
             {{ item }}
           </el-menu-item>
         </el-menu>
@@ -47,24 +50,28 @@
       </div>
       <!-- 产品 -->
       <div class="product">
+        <label class="product-title">搜索结果</label>
         <div class="product-list">
-          <color-product v-for="(item, index) in products" :product="item" :key="vnodeKey('product', index)">
+          <color-product
+            v-for="(item, index) in products"
+            :product="item"
+            :key="vnodeKey('product', index)"
+          >
           </color-product>
         </div>
-        <div class="more-btn">
+        <div class="more">
           <a href="javascript:void(0)">更多精彩等你</a>
         </div>
-      </div>
-      <!-- 广告位 -->
-      <div class="advertisemnet">
-        <img :src="space" />
-        <img :src="space" />
       </div>
       <!-- 推荐板块 -->
       <div class="recommend">
         <label class="recommend-title">为您推荐</label>
         <div class="product-list">
-          <color-product v-for="(item, index) in recommendProducts" :product="item" :key="vnodeKey('recommendProduct', index)">
+          <color-product
+            v-for="(item, index) in recommendProducts"
+            :product="item"
+            :key="vnodeKey('recommendProduct', index)"
+          >
           </color-product>
         </div>
       </div>
