@@ -1,7 +1,7 @@
 .header {
   height: .7rem;
   line-height: .7rem;
-  box-shadow: 0px 1px 0px 0px #ebebeb;
+  border-bottom: 1px solid #ebebeb;
   display: flex;
 
   &-logo {
@@ -34,6 +34,7 @@
     align-items: center;
     align-content: center;
 
+    // 搜索框
     .el-input {
       width: 1.8rem;
 
@@ -44,6 +45,7 @@
       }
     }
 
+    // 上传作品
     .el-button {
       padding: .08rem .12rem;
     }
@@ -58,18 +60,25 @@
       cursor: pointer;
     }
 
-    .login,
-    .register {
-      padding: 0 @mx-distant;
+    // 游客执行注册或者登陆
+    .custom {
+      display: flex;
+
+      .login,
+      .register {
+        padding: 0 @mx-distant;
+      }
+
+      .register {
+        border-left: 1px solid @primary;
+        margin-left: 0;
+      }
     }
 
-    .register {
-      border-left: 1px solid @primary;
-      margin-left: 0;
-    }
-
+    // 登陆后头像
     .user-logo {
       margin-right: @mx-distant;
+
       img {
         border-radius: 50%;
         width: .3rem;
@@ -78,6 +87,7 @@
       }
     }
 
+    // 消息
     >img {
       width: .22rem;
       height: .24rem;

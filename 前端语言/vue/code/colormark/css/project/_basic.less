@@ -70,7 +70,20 @@ textarea {
   margin: 0;
 }
 
-body, header, footer, .el-container {
-  width: 19rem;
+body,
+.footer,
+.header,
+.el-container {
+  width: 100%;
+  min-width: @home-body;
   margin: 0 auto;
+}
+
+.header {
+  background-color: #ffffff;
+}
+
+.el-container,
+.footer {
+  background-color: #eff2f5;
 }

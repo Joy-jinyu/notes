@@ -1,0 +1,74 @@
+// 消息弹窗
+.notify-card {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+
+  .notify-header {
+    display: flex;
+    padding-bottom: .1rem;
+
+    .clear {
+      background-color: #ffffff;
+      color: #999999;
+      cursor: pointer;
+
+      &:active {
+        color: @primary;
+      }
+    }
+
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .notify-body {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    height: 2.06rem;
+
+    .message {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+
+      span {
+        padding: @basic-distant/2 0;
+        color: #999999;
+        cursor: pointer;
+
+        i {
+          padding: 0 @basic-distant;
+        }
+
+        &:hover {
+          color: @primary;
+        }
+      }
+    }
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .notify-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .14rem 0;
+    color: @primary;
+
+    span {
+      cursor: pointer;
+
+      &:active {
+        color: @light-primary;
+      }
+    }
+  }
+}

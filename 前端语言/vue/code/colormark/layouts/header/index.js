@@ -3,6 +3,7 @@ export default {
     data() {
         return {
             search: '',
+            loginStatus: true
         }
     },
     computed: {

@@ -1,16 +1,8 @@
 .color-page {
-  width: @home-body;
+  width: 100%;
   height: auto;
-  padding: @me-distant 0;
-  margin: 0 auto;
-
-  .swiper-body {
-    width: 100%;
-  }
 
   .main-body {
-    width: 100%;
-
     // 副内容板块
     .subContent {
       width: 100%;
@@ -48,7 +40,7 @@
 
     // 产品
     .product {
-      margin: @sm-distant auto 0;
+      margin: @basic-distant auto 0;
       width: 100%;
 
       .product-title {
@@ -110,7 +102,7 @@
     }
 
     .recommend {
-      margin: @sm-distant auto 0;
+      margin: @basic-distant auto 0;
       width: 100%;
 
       &-title {
@@ -134,5 +126,10 @@
         }
       }
     }
+  }
+
+  .swiper-body, .main-body {
+    width: @home-body;
+    margin: 0 auto;
   }
 }
