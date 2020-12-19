@@ -1,0 +1,25 @@
+{
+  "name": "hello-vue3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "jasmine-core": "^3.6.0",
+    "karma": "^5.2.3",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-jasmine": "^4.0.1",
+    "karma-mocha": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "mocha": "^8.2.1",
+    "vite": "^1.0.0-rc.13"
+  }
+}
