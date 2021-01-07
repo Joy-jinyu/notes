@@ -29,7 +29,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './test/unit/**/*.js': ['coverage'] //对哪些文件生成代码覆盖率
+      // './test/unit/**/*.js': ['coverage'] //对哪些文件生成代码覆盖率
     },
 
 
