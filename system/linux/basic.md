@@ -27,14 +27,21 @@
 
 ---
 
+### 常用命令
+
++ netstat -tanlp
+  查看正在运行的进程
+
+---
+
 ### **Package**
 
-|  name   |        description        |
-| :-----: | :-----------------------: |
-| `lsof`  | `netstat` 和 `ps`的结合体 |
-| `nohup` |       后台运行程序        |
-|         |                           |
-|         |                           |
+|   name   |            description            |
+| :------: | :-------------------------------: |
+|  `lsof`  |     `netstat` 和 `ps`的结合体     |
+| `nohup`  |           后台运行程序            |
+| dos2unix | 转换文件的内容格式从windows到unix |
+|          |                                   |
 
 ---
 

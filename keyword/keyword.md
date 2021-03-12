@@ -2,17 +2,17 @@
 
 ---
 
-|                         Keyword                         |                         Description                          |
-| :-----------------------------------------------------: | :----------------------------------------------------------: |
-| [mongoosejs](http://www.mongoosejs.net/docs/index.html) |                          数据库插件                          |
-|       [GitTalk](https://github.com/gitalk/gitalk)       |                             评论                             |
-|         [Highlightjs](https://highlightjs.org/)         | 代码高亮 可搭配  [**marked** ](https://github.com/markedjs/marked) |
-|                         七牛云                          |                           图片存储                           |
-|                                                         |                                                              |
-|                                                         |                                                              |
-|                                                         |                                                              |
-|                                                         |                                                              |
-|                                                         |                                                              |
+|                           Keyword                            |                         Description                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|   [mongoosejs](http://www.mongoosejs.net/docs/index.html)    |                          数据库插件                          |
+|         [GitTalk](https://github.com/gitalk/gitalk)          |                             评论                             |
+|           [Highlightjs](https://highlightjs.org/)            | 代码高亮 可搭配  [**marked** ](https://github.com/markedjs/marked) |
+|                            七牛云                            |                           图片存储                           |
+|            [photoswipe](https://photoswipe.com/)             |                       图片点击展示大图                       |
+|         [tocbot](https://tscanlin.github.io/tocbot/)         |                     Html文章展示侧边菜单                     |
+|            [fundebug](https://docs.fundebug.com/)            |                      应用 BUG 监控平台                       |
+|            [jsDeliver](https://www.jsdelivr.com/)            |                   搭配github搭建自己的图床                   |
+| [UrlChangeTracker](https://tongji.baidu.com/web/help/articleList?type=0&category=17) |                           百度统计                           |
 
 ---
 
