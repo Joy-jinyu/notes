@@ -10,9 +10,9 @@
 |  Ecosystem   |  生态系统  |
 | At a minimum | 最低限度上 |
 |  Middleware  |   中间件   |
-|              |            |
-|              |            |
-|              |            |
+|  Anonymous   | 匿名/无名  |
+|    Syntax    | 句法/语法  |
+|  Immutable   |  不可变的  |
 
 ----
 
@@ -48,4 +48,14 @@
 |              |              |
 |              |              |
 |              |              |
+
+---
+
+### Others
+
+---
+
+|    English    | Chinese |
+| :-----------: | :-----: |
+| precipitation |  沉淀   |
 
