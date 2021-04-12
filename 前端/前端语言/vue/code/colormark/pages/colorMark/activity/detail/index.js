@@ -1,14 +1,14 @@
 export default {
     name: 'ActivityDetail',
-    data() {
+    data () {
         return {}
     },
     methods: {
-        handleSelect() {},
-        vnodeIndex(index) {
+        handleSelect () {},
+        vnodeIndex (index) {
             return `${index}`
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

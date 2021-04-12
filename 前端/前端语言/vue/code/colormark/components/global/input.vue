@@ -20,7 +20,7 @@ export default {
             default: ''
         }
     },
-    data() {
+    data () {
         return {}
     },
     computed: {
@@ -34,7 +34,7 @@ export default {
         }
     },
     methods: {
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index
         }
     }

@@ -1,6 +1,6 @@
 export default {
     name: 'User',
-    data() {
+    data () {
         return {
             // 选中的菜单
             activeMenu: 'product',
@@ -142,12 +142,12 @@ export default {
         }
     },
     methods: {
-        handleSelect() {},
+        handleSelect () {},
         // 选中菜单
-        selectMenu(menu) {
+        selectMenu (menu) {
             this.activeMenu = menu.code
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

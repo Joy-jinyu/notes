@@ -10,7 +10,7 @@ export default {
         PersonProduct,
         PersonFans
     },
-    data() {
+    data () {
         return {
             // 选中的aside菜单
             activeAside: '',
@@ -83,24 +83,24 @@ export default {
             showPage: 'PersonFans'
         }
     },
-    created() {
+    created () {
         this.products = productList.splice(0, 9)
         this.fansList = fansList
         this.selectAside(this.asideMenus[0])
     },
     methods: {
-        handleSelect() {},
+        handleSelect () {},
         // 选中aside菜单
-        selectAside(menu) {
+        selectAside (menu) {
             this.activeAside = menu.code
             this.sectionMenus = menu.children
             this.selectSection(menu.children[0])
         },
         // 选中了section菜单项目
-        selectSection(menu) {
+        selectSection (menu) {
             this.activeSection = menu.code
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

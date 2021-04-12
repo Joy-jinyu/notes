@@ -19,11 +19,11 @@ export default {
             default: []
         }
     },
-    data() {
+    data () {
         return {}
     },
     methods: {
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index
         }
     }

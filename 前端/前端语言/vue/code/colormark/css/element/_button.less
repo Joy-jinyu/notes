@@ -1,35 +1,35 @@
 .el-button {
-    &:hover,
-    &:focus {
-        color: @light-primary;
-        border-color: @light-primary;
-        background-color: #dcdfe6;
-    }
+  &:hover,
+  &:focus {
+    color: @light-primary;
+    border-color: @light-primary;
+    background-color: #dcdfe6;
+  }
 
-    &:active {
-        color: @primary;
-        border-color: @primary;
-        background-color: #dcdfe6;
-    }
+  &:active {
+    color: @primary;
+    border-color: @primary;
+    background-color: #dcdfe6;
+  }
 
-    + .el-button {
-        margin-left: 0;
-    }
+  + .el-button {
+    margin-left: 0;
+  }
 }
 
 .el-button--primary {
+  background-color: @primary;
+  border-color: @primary;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: @light-primary;
+    border-color: @light-primary;
+  }
+
+  &:active {
     background-color: @primary;
     border-color: @primary;
-
-    &:hover,
-    &:focus {
-        color: #ffffff;
-        background-color: @light-primary;
-        border-color: @light-primary;
-    }
-
-    &:active {
-        background-color: @primary;
-        border-color: @primary;
-    }
+  }
 }

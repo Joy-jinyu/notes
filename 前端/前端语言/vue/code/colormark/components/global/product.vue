@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-</template>     
+</template>
 <script>
 // 空白占位符
 export default {

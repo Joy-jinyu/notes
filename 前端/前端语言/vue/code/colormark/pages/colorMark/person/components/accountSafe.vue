@@ -56,7 +56,7 @@ export default {
         }
     },
     methods: {
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

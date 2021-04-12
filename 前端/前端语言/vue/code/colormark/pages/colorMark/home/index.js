@@ -2,7 +2,7 @@ import products from '@/assets/data/products'
 
 export default {
     name: 'Home',
-    data() {
+    data () {
         return {
             // 轮播图资源
             swipers: [
@@ -80,15 +80,15 @@ export default {
             ]
         }
     },
-    created() {
+    created () {
         this.products = products
     },
     methods: {
-        handleSelect() {},
-        vnodeIndex(index) {
+        handleSelect () {},
+        vnodeIndex (index) {
             return `${index}`
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

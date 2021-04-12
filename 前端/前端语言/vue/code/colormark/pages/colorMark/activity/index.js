@@ -1,6 +1,6 @@
 export default {
     name: 'Activity',
-    data() {
+    data () {
         return {
             // 广告位
             space: require('@/static/img/space.png'),
@@ -67,7 +67,7 @@ export default {
         vnodeIndex(index) {
             return `${index}`
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         }
     }

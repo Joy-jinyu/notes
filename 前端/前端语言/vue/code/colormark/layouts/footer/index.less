@@ -1,60 +1,60 @@
 .footer {
-    background-color: #eff2f5;
-    height: auto;
+  background-color: #eff2f5;
+  height: auto;
 
-    &-top {
-        @height: 0.9rem;
-        margin: 0 auto;
-        width: @home-body;
-        height: @height;
-        display: flex;
-        align-items: center;
+  &-top {
+    @height: 0.9rem;
+    margin: 0 auto;
+    width: @home-body;
+    height: @height;
+    display: flex;
+    align-items: center;
 
-        h3 {
-            display: block;
-            height: 100%;
-            line-height: @height;
-            font-size: 0.32rem;
-        }
-
-        .enterprise-link {
-            height: 100%;
-            width: 50vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            &__item {
-                flex: 1;
-                font-size: 14px;
-                padding: @basic-distant;
-
-                a {
-                    color: #999999;
-                    display: block;
-                }
-
-                a:hover {
-                    color: skyblue;
-                }
-            }
-        }
+    h3 {
+      display: block;
+      height: 100%;
+      line-height: @height;
+      font-size: 0.32rem;
     }
 
-    &-bottom {
-        @height: 1rem;
-        margin: 0 auto;
-        width: @home-body;
-        height: @height;
-        height: @height;
-        font-size: @mini-font-size;
-        color: #999999;
-        border-top: 2px solid #e3e3e3;
-        display: flex;
-        align-items: center;
+    .enterprise-link {
+      height: 100%;
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-        .grid-content {
-            text-align: right;
+      &__item {
+        flex: 1;
+        font-size: 14px;
+        padding: @basic-distant;
+
+        a {
+          color: #999999;
+          display: block;
         }
+
+        a:hover {
+          color: skyblue;
+        }
+      }
     }
+  }
+
+  &-bottom {
+    @height: 1rem;
+    margin: 0 auto;
+    width: @home-body;
+    height: @height;
+    height: @height;
+    font-size: @mini-font-size;
+    color: #999999;
+    border-top: 2px solid #e3e3e3;
+    display: flex;
+    align-items: center;
+
+    .grid-content {
+      text-align: right;
+    }
+  }
 }

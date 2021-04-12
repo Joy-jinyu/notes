@@ -1,6 +1,6 @@
 export default {
     name: 'Login',
-    data() {
+    data () {
         return {
             telephone: '', // 电话号码
             password: '', // 密码
@@ -23,19 +23,19 @@ export default {
     },
     methods: {
         // 发送验证码
-        sentVerify() {
+        sentVerify () {
             console.log('发送验证码')
         },
         // 切换操作方式
-        switchAction(action) {
+        switchAction (action) {
             this.actionType = action
         },
         // 切换登录方式
-        handleClick(tab, event) {
+        handleClick (tab, event) {
             console.log(tab, event)
         },
         // 节点关键字
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index
         }
     }

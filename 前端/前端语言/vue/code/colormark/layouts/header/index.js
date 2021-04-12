@@ -1,6 +1,6 @@
 export default {
     name: 'Header',
-    data() {
+    data () {
         return {
             search: '',
             loginStatus: true

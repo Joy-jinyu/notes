@@ -1,6 +1,6 @@
 export default {
     name: 'Search',
-    data() {
+    data () {
         return {
             // 搜索内容
             search: '',
@@ -106,15 +106,15 @@ export default {
         }
     },
     methods: {
-        handleSelect() {},
-        vnodeIndex(index) {
+        handleSelect () {},
+        vnodeIndex (index) {
             return `${index}`
         },
-        vnodeKey(name, index) {
+        vnodeKey (name, index) {
             return name + index++
         },
         // 查询建议
-        querySuggestion(queryString, cb) {
+        querySuggestion (queryString, cb) {
             const suggestions = this.suggestions
             const queryResult = suggestions.filter(
                 (suggestion) => suggestion.value.indexOf(queryString) !== -1
