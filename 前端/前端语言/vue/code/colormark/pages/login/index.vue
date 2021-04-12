@@ -8,29 +8,28 @@
             </div>
 
             <!-- 注册账号 -->
-            <div class="login-body__action" v-if="actionType === 'register'">
+            <div class="login-body__action"
+                 v-if="actionType === 'register'">
                 <span class="action-title">注册账号</span>
                 <!-- 手机号码 -->
                 <div class="action-first">
-                    <el-input
-                        v-model="telephone"
-                        placeholder="请输入您的手机号"
-                    ></el-input>
+                    <el-input v-model="telephone"
+                              placeholder="请输入您的手机号"></el-input>
                 </div>
 
                 <!-- 密码 -->
                 <div class="action-content">
-                    <el-input
-                        v-model="password"
-                        placeholder="请输入您的密码"
-                    ></el-input>
+                    <el-input v-model="password"
+                              placeholder="请输入您的密码"></el-input>
                 </div>
 
                 <!-- 校验码 -->
                 <div class="action-content">
-                    <el-input v-model="verify" placeholder="请输入您的密码">
+                    <el-input v-model="verify"
+                              placeholder="请输入您的密码">
                         <template #append>
-                            <span class="verify" @click="sentVerify()">
+                            <span class="verify"
+                                  @click="sentVerify()">
                                 验证码
                             </span>
                         </template>
@@ -38,7 +37,8 @@
                 </div>
 
                 <!-- 协议 -->
-                <el-checkbox v-model="agree" class="action-agree">
+                <el-checkbox v-model="agree"
+                             class="action-agree">
                     <span>
                         我已阅读并接受
                         <strong @click.prevent="sentVerify()">用户协议</strong>
@@ -55,7 +55,8 @@
             </div>
 
             <!-- 登录 -->
-            <div class="login-body__action" v-else>
+            <div class="login-body__action"
+                 v-else>
                 <div class="login-tabs">
                     <span class="active">密码登录</span>
                     <span>验证码登录</span>
@@ -63,22 +64,19 @@
 
                 <!-- 手机号码 -->
                 <div class="action-first">
-                    <el-input
-                        v-model="telephone"
-                        placeholder="请输入您的手机号"
-                    ></el-input>
+                    <el-input v-model="telephone"
+                              placeholder="请输入您的手机号"></el-input>
                 </div>
 
                 <!-- 密码 -->
                 <div class="action-content">
-                    <el-input
-                        v-model="password"
-                        placeholder="请输入您的密码"
-                    ></el-input>
+                    <el-input v-model="password"
+                              placeholder="请输入您的密码"></el-input>
                 </div>
 
                 <!-- 协议 -->
-                <el-checkbox v-model="agree" class="action-agree">
+                <el-checkbox v-model="agree"
+                             class="action-agree">
                     <span>忘记密码</span>
                 </el-checkbox>
 
@@ -87,11 +85,9 @@
                 <el-button @click="switchAction('register')">注册</el-button>
 
                 <div class="social-login">
-                    <span
-                        class="social-item"
-                        v-for="(social, index) of socialItems"
-                        :key="vnodeKey('socail', index)"
-                    >
+                    <span class="social-item"
+                          v-for="(social, index) of socialItems"
+                          :key="vnodeKey('socail', index)">
                         <img :src="social.src" />
                     </span>
                 </div>

@@ -2,12 +2,11 @@
     <!-- 产品 -->
     <div class="fans-body">
         <div class="fans-list">
-            <div
-                class="fans"
-                v-for="(fans, index) in fansList"
-                :key="vnodeKey('fans', index)"
-            >
-                <img class="fans-logo" :src="fans.logo" />
+            <div class="fans"
+                 v-for="(fans, index) in fansList"
+                 :key="vnodeKey('fans', index)">
+                <img class="fans-logo"
+                     :src="fans.logo" />
                 <div class="fans-center">
                     <span class="name">{{ fans.name }}</span>
                     <div class="position">
@@ -33,22 +32,18 @@
                         <el-button>私信</el-button>
                     </div>
                 </div>
-                <img
-                    class="fans-product"
-                    v-for="(product, index) in fans.products"
-                    :key="vnodeKey('fansProduct', index)"
-                    :src="product"
-                />
+                <img class="fans-product"
+                     v-for="(product, index) in fans.products"
+                     :key="vnodeKey('fansProduct', index)"
+                     :src="product" />
             </div>
         </div>
 
         <color-space />
 
-        <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="1000"
-        ></el-pagination>
+        <el-pagination background
+                       layout="prev, pager, next"
+                       :total="1000"></el-pagination>
     </div>
 </template>
 <script>

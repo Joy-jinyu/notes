@@ -2,17 +2,13 @@
     <!-- 产品 -->
     <div class="product">
         <div class="product-list">
-            <color-product
-                v-for="(item, index) in products"
-                :product="item"
-                :key="vnodeKey('product', index)"
-            ></color-product>
+            <color-product v-for="(item, index) in products"
+                           :product="item"
+                           :key="vnodeKey('product', index)"></color-product>
         </div>
-        <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="1000"
-        ></el-pagination>
+        <el-pagination background
+                       layout="prev, pager, next"
+                       :total="1000"></el-pagination>
     </div>
 </template>
 <script>

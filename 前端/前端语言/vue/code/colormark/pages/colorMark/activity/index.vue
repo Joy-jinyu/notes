@@ -9,17 +9,13 @@
             <!-- 导航 -->
             <div class="nav">
                 <!-- 菜单项 -->
-                <el-menu
-                    :default-active="activeMenu"
-                    class="el-menu-demo"
-                    mode="horizontal"
-                    @select="handleSelect"
-                >
-                    <el-menu-item
-                        v-for="(item, index) of navMenus"
-                        :index="vnodeIndex(index)"
-                        :key="vnodeKey('navMenu', index)"
-                    >
+                <el-menu :default-active="activeMenu"
+                         class="el-menu-demo"
+                         mode="horizontal"
+                         @select="handleSelect">
+                    <el-menu-item v-for="(item, index) of navMenus"
+                                  :index="vnodeIndex(index)"
+                                  :key="vnodeKey('navMenu', index)">
                         {{ item }}
                     </el-menu-item>
                 </el-menu>
@@ -27,11 +23,9 @@
             <!-- 活动 -->
             <div class="product">
                 <div class="product-list">
-                    <color-activity
-                        v-for="(item, index) of activities"
-                        :activity="item"
-                        :key="vnodeKey('activity', index)"
-                    ></color-activity>
+                    <color-activity v-for="(item, index) of activities"
+                                    :activity="item"
+                                    :key="vnodeKey('activity', index)"></color-activity>
                 </div>
             </div>
         </div>

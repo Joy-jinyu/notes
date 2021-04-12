@@ -34,12 +34,10 @@
                     </div>
                 </div>
                 <div class="section-menu">
-                    <span
-                        v-for="(item, index) of menus"
-                        :class="{ active: item.code === activeMenu }"
-                        :key="vnodeKey('activeMenu', index)"
-                        @click="selectMenu(item)"
-                    >
+                    <span v-for="(item, index) of menus"
+                          :class="{ active: item.code === activeMenu }"
+                          :key="vnodeKey('activeMenu', index)"
+                          @click="selectMenu(item)">
                         {{ item.name }}
                     </span>
                 </div>
@@ -47,17 +45,13 @@
                     <!-- 产品 -->
                     <div class="product">
                         <div class="product-list">
-                            <color-product
-                                v-for="(item, index) in products"
-                                :product="item"
-                                :key="vnodeKey('product', index)"
-                            ></color-product>
+                            <color-product v-for="(item, index) in products"
+                                           :product="item"
+                                           :key="vnodeKey('product', index)"></color-product>
                         </div>
-                        <el-pagination
-                            background
-                            layout="prev, pager, next"
-                            :total="1000"
-                        ></el-pagination>
+                        <el-pagination background
+                                       layout="prev, pager, next"
+                                       :total="1000"></el-pagination>
                     </div>
                 </div>
             </section>

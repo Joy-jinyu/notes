@@ -2,43 +2,36 @@
     <div class="color-page home">
         <!-- 轮播图部分 -->
         <div class="swiper-body">
-            <color-swiper :height="'350px'" :swipers="swipers"></color-swiper>
+            <color-swiper :height="'350px'"
+                          :swipers="swipers"></color-swiper>
         </div>
         <!-- 主体内容板块 -->
         <div class="main-body">
             <!-- 副内容 -->
             <div class="subContent">
-                <img
-                    :src="item.src"
-                    v-for="(item, index) of recommends"
-                    :key="vnodeKey('subContent', index)"
-                />
+                <img :src="item.src"
+                     v-for="(item, index) of recommends"
+                     :key="vnodeKey('subContent', index)" />
             </div>
             <!-- 导航 -->
             <div class="nav">
                 <!-- 菜单项 -->
-                <el-menu
-                    :default-active="activeMenu"
-                    class="el-menu-demo"
-                    mode="horizontal"
-                    @select="handleSelect"
-                >
-                    <el-menu-item
-                        v-for="(item, index) of navMenus"
-                        :index="vnodeIndex(index)"
-                        :key="vnodeKey('navMenu', index)"
-                    >
+                <el-menu :default-active="activeMenu"
+                         class="el-menu-demo"
+                         mode="horizontal"
+                         @select="handleSelect">
+                    <el-menu-item v-for="(item, index) of navMenus"
+                                  :index="vnodeIndex(index)"
+                                  :key="vnodeKey('navMenu', index)">
                         {{ item }}
                     </el-menu-item>
                 </el-menu>
                 <color-space />
                 <!-- 排序方式 -->
-                <el-menu
-                    :default-active="activeSort"
-                    class="el-menu-demo"
-                    mode="horizontal"
-                    @select="handleSelect"
-                >
+                <el-menu :default-active="activeSort"
+                         class="el-menu-demo"
+                         mode="horizontal"
+                         @select="handleSelect">
                     <el-menu-item index="1">
                         最新发布
                         <i class="el-icon-arrow-down"></i>
@@ -52,11 +45,9 @@
             <!-- 产品 -->
             <div class="product">
                 <div class="product-list">
-                    <color-product
-                        v-for="(item, index) in products"
-                        :product="item"
-                        :key="vnodeKey('product', index)"
-                    ></color-product>
+                    <color-product v-for="(item, index) in products"
+                                   :product="item"
+                                   :key="vnodeKey('product', index)"></color-product>
                 </div>
                 <div class="more-btn">
                     <a href="javascript:void(0)">更多精彩等你</a>
@@ -71,11 +62,9 @@
             <div class="recommend">
                 <label class="recommend-title">为您推荐</label>
                 <div class="product-list">
-                    <color-product
-                        v-for="(item, index) in recommendProducts"
-                        :product="item"
-                        :key="vnodeKey('recommendProduct', index)"
-                    ></color-product>
+                    <color-product v-for="(item, index) in recommendProducts"
+                                   :product="item"
+                                   :key="vnodeKey('recommendProduct', index)"></color-product>
                 </div>
             </div>
         </div>

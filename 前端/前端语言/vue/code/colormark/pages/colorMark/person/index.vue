@@ -27,34 +27,28 @@
                     <el-button type="primary">开始创作</el-button>
                 </div>
                 <div class="person-menu">
-                    <span
-                        v-for="(item, index) of asideMenus"
-                        :class="{ active: item.code === activeAside }"
-                        :key="vnodeKey('asideMenu', index)"
-                        @click="selectAside(item)"
-                    >
+                    <span v-for="(item, index) of asideMenus"
+                          :class="{ active: item.code === activeAside }"
+                          :key="vnodeKey('asideMenu', index)"
+                          @click="selectAside(item)">
                         {{ item.name }}
                     </span>
                 </div>
             </aside>
             <section>
                 <div class="section-menu">
-                    <span
-                        v-for="(item, index) of sectionMenus"
-                        :class="{ active: item.code === activeSection }"
-                        :key="vnodeKey('sectionMenu', index)"
-                        @click="selectSection(item)"
-                    >
+                    <span v-for="(item, index) of sectionMenus"
+                          :class="{ active: item.code === activeSection }"
+                          :key="vnodeKey('sectionMenu', index)"
+                          @click="selectSection(item)">
                         {{ item.name }}
                     </span>
                 </div>
 
                 <div class="section-body">
-                    <component
-                        :is="showPage"
-                        :products="products"
-                        :fans-list="fansList"
-                    ></component>
+                    <component :is="showPage"
+                               :products="products"
+                               :fans-list="fansList"></component>
                 </div>
             </section>
         </div>
