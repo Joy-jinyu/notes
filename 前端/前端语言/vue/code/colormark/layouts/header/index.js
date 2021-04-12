@@ -6,6 +6,5 @@ export default {
             loginStatus: true
         }
     },
-    computed: {
-    }
+    computed: {}
 }

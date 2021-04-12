@@ -9,7 +9,11 @@ export default [
         fansNum: 278,
         focusNum: 449,
         isFocusEach: false,
-        products: [require('@/static/img/位图_5.png'),require('@/static/img/位图_5.png'),require('@/static/img/位图_5.png')]
+        products: [
+            require('@/static/img/位图_5.png'),
+            require('@/static/img/位图_5.png'),
+            require('@/static/img/位图_5.png')
+        ]
     },
     {
         id: 2,
@@ -21,7 +25,11 @@ export default [
         fansNum: 1923,
         focusNum: 236,
         isFocusEach: false,
-        products: [require('@/static/img/位图_6.png'),require('@/static/img/位图_6.png'),require('@/static/img/位图_6.png')]
+        products: [
+            require('@/static/img/位图_6.png'),
+            require('@/static/img/位图_6.png'),
+            require('@/static/img/位图_6.png')
+        ]
     },
     {
         id: 3,
@@ -33,6 +41,10 @@ export default [
         fansNum: 398,
         focusNum: 236,
         isFocusEach: false,
-        products: [require('@/static/img/位图_7.png'),require('@/static/img/位图_7.png'),require('@/static/img/位图_7.png')]
-    },
+        products: [
+            require('@/static/img/位图_7.png'),
+            require('@/static/img/位图_7.png'),
+            require('@/static/img/位图_7.png')
+        ]
+    }
 ]

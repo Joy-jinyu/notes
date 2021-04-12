@@ -1,4 +1,4 @@
-export default  [
+export default [
     {
         id: 1,
         title: 'PlayStation APP用户界面重设计 | Redesign',
@@ -7,7 +7,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_9.png'),
         headImg: require('@/assets/img/person.png'),
-        name: '张三',
+        name: '张三'
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'lisi',
+        name: 'lisi'
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_6.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'wangwu',
+        name: 'wangwu'
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_7.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_8.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_10.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 7,
@@ -67,7 +67,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_6.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 8,
@@ -77,7 +77,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 10,
@@ -97,7 +97,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'Ryan',
+        name: 'Ryan'
     },
     {
         id: 11,
@@ -107,7 +107,7 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
+        name: 'zhaoliu'
     },
     {
         id: 12,
@@ -117,6 +117,6 @@ export default  [
         like: 108,
         contImg: require('@/static/img/位图_5.png'),
         headImg: require('@/assets/img/person.png'),
-        name: 'zhaoliu',
-    },
+        name: 'zhaoliu'
+    }
 ]

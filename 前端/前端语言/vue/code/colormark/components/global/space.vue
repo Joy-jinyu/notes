@@ -1,15 +1,15 @@
 <template>
-  <div></div>
+    <div></div>
 </template>
 <script>
 // 空白占位符
 export default {
-  name: 'Space',
-};
+    name: 'Space'
+}
 </script>
 
 <style lang="less" scoped>
 div {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 </style>

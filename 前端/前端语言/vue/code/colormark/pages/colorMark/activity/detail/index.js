@@ -1,17 +1,15 @@
 export default {
     name: 'ActivityDetail',
     data() {
-        return {
-            
-        };
+        return {}
     },
     methods: {
-        handleSelect() { },
+        handleSelect() {},
         vnodeIndex(index) {
             return `${index}`
         },
         vnodeKey(name, index) {
-            return name + index++;
-        },
-    },
-};
+            return name + index++
+        }
+    }
+}

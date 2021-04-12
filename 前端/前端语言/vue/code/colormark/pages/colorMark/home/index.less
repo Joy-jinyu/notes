@@ -1,21 +1,19 @@
 .home {
-  padding: @me-distant 0 0;
-  background-color: #ffffff;
-  .main-body {
-    .product {
-      @distant: .32rem;
-
-      .product-list {
-        &__item {
-          &:nth-child(4n + 2) {
-            margin: 0 @distant/2 0 @distant;
-          }
-
-          &:nth-child(4n + 3) {
-            margin: 0 @distant 0 @distant/2;
-          }
+    padding: @me-distant 0 0;
+    background-color: #ffffff;
+    .main-body {
+        .product {
+            @distant: 0.32rem;
+            .product-list {
+                &__item {
+                    &:nth-child(4n + 2) {
+                        margin: 0 @distant / 2 0 @distant;
+                    }
+                    &:nth-child(4n + 3) {
+                        margin: 0 @distant 0 @distant / 2;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

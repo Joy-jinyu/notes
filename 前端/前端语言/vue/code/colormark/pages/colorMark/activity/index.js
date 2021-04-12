@@ -5,7 +5,13 @@ export default {
             // 广告位
             space: require('@/static/img/space.png'),
             // 导航菜单
-            navMenus: ['最新活动', '设计大赛', '专题策划', '线上活动', '线下活动'],
+            navMenus: [
+                '最新活动',
+                '设计大赛',
+                '专题策划',
+                '线上活动',
+                '线下活动'
+            ],
             // 导航菜单选中项
             activeMenu: '1',
             activities: [
@@ -53,16 +59,16 @@ export default {
                     like: 108,
                     contImg: require('@/static/img/activity/activity-4.png')
                 }
-            ],
-        };
+            ]
+        }
     },
     methods: {
-        handleSelect() { },
+        handleSelect() {},
         vnodeIndex(index) {
             return `${index}`
         },
         vnodeKey(name, index) {
-            return name + index++;
+            return name + index++
         }
-    },
-};
+    }
+}

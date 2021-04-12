@@ -1,44 +1,44 @@
 <template>
-  <el-input
-    v-model="inputValue"
-    :placeholder="placeholder"
-    :suffix-icon="suffixIcon"
-  >
-    <template #suffix>
-      <slot name="suffix"></slot>
-    </template>
-  </el-input>
+    <el-input
+        v-model="inputValue"
+        :placeholder="placeholder"
+        :suffix-icon="suffixIcon"
+    >
+        <template #suffix>
+            <slot name="suffix"></slot>
+        </template>
+    </el-input>
 </template>
 
 <script>
 export default {
-  name: 'Input',
-  props: {
-    value: String,
-    placeholder: {
-      default: '',
+    name: 'Input',
+    props: {
+        value: String,
+        placeholder: {
+            default: ''
+        },
+        suffixIcon: {
+            default: ''
+        }
     },
-    suffixIcon: {
-      default: '',
+    data() {
+        return {}
     },
-  },
-  data() {
-    return {};
-  },
-  computed: {
-    inputValue: {
-      set: function (value) {
-        this.$emit('input', value);
-      },
-      get: function () {
-        return this.value;
-      },
+    computed: {
+        inputValue: {
+            set: function (value) {
+                this.$emit('input', value)
+            },
+            get: function () {
+                return this.value
+            }
+        }
     },
-  },
-  methods: {
-    vnodeKey(name, index) {
-      return name + index;
-    },
-  },
-};
+    methods: {
+        vnodeKey(name, index) {
+            return name + index
+        }
+    }
+}
 </script>

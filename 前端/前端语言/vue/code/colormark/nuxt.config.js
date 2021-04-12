@@ -30,20 +30,20 @@ export default {
     transpile: [/^element-ui/],
     extend(config, ctx) {
       // Run ESLint on save
-      // if (ctx.isDev && ctx.isClient) {
-      //   config.module.rules.push({
-      //     enforce: 'pre',
-      //     test: /\.(js|vue)$/,
-      //     loader: 'eslint-loader',
-      //     exclude: /(node_modules)/,
-      //     options: {
-      //       fix: true
-      //     }
-      //   })
-      // }
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            fix: true,
+          },
+        })
+      }
     },
-    styleResources: { //设置全局样式，会比项目文件预先加载 [https://github.com/nuxt/nuxt.js/tree/dev/examples/style-resources]
-      less: './css/mixins/index.less'
-    }
-  },
-};
+    styleResources: { // 设置全局样式，会比项目文件预先加载 [https://github.com/nuxt/nuxt.js/tree/dev/examples/style-resources]
+      less: './css/mixins/index.less',
+    },
+  }
+}

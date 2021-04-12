@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <el-container>
-      <color-header></color-header>
-      <nuxt-child></nuxt-child>
-      <color-footer></color-footer>
-    </el-container>
-  </div>
+    <div>
+        <el-container>
+            <color-header></color-header>
+            <nuxt-child></nuxt-child>
+            <color-footer></color-footer>
+        </el-container>
+    </div>
 </template>
 
 <script>

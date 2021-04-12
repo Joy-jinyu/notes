@@ -1,139 +1,119 @@
 .person {
-  width: 100%;
-  padding: @me-distant 0 0;
-  background-color: #eff2f5;
-
-  .main-body {
-    width: @home-body;
-    margin: 0 auto;
-    height: 12.7rem;
-    display: flex;
-    justify-content: space-between;
-    @background-color: #ffffff;
-
-    aside {
-      width: 3rem;
-
-      .person-center {
+    width: 100%;
+    padding: @me-distant 0 0;
+    background-color: #eff2f5;
+    .main-body {
+        width: @home-body;
+        margin: 0 auto;
+        height: 12.7rem;
         display: flex;
-        flex-flow: column;
-        align-items: center;
-        margin: .65rem 0 .2rem;
-        background-color: @background-color;
-
-        img {
-          width: 1.3rem;
-          height: 1.3rem;
-          border-radius: 50%;
-          margin-top: -0.65rem;
-        }
-
-        .name {
-          display: block;
-          font-size: .26rem;
-          font-weight: 500;
-          margin: .3rem 0 .1rem;
-        }
-
-        .position {
-          font-size: @mini-font-size;
-          margin-bottom: .3rem;
-          span {
-            padding: 0 .1rem;
-            color: #999999;
-          }
-        }
-
-        .parameter {
-          display: flex;
-          justify-content: space-around;
-          width: 100%;
-
-          div {
-            span {
-              display: block;
-              text-align: center;
+        justify-content: space-between;
+        @background-color: #ffffff;
+        aside {
+            width: 3rem;
+            .person-center {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                margin: 0.65rem 0 0.2rem;
+                background-color: @background-color;
+                img {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    border-radius: 50%;
+                    margin-top: -0.65rem;
+                }
+                .name {
+                    display: block;
+                    font-size: 0.26rem;
+                    font-weight: 500;
+                    margin: 0.3rem 0 0.1rem;
+                }
+                .position {
+                    font-size: @mini-font-size;
+                    margin-bottom: 0.3rem;
+                    span {
+                        padding: 0 0.1rem;
+                        color: #999999;
+                    }
+                }
+                .parameter {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    div {
+                        span {
+                            display: block;
+                            text-align: center;
+                        }
+                        .number {
+                            font-size: 0.26rem;
+                            font-weight: 500;
+                        }
+                        .type {
+                            font-size: @mini-font-size;
+                            color: #999999;
+                        }
+                    }
+                }
+                button {
+                    width: 2.08rem;
+                    height: 0.34rem;
+                    border-radius: @me-radius !important;
+                    margin: 0.2rem 0 0.3rem;
+                }
             }
-            .number {
-              font-size: .26rem;
-              font-weight: 500;
+            .person-menu {
+                padding: 0.1rem 0.33rem;
+                background-color: @background-color;
+                span {
+                    display: block;
+                    width: 0.56rem;
+                    box-sizing: content-box;
+                    font-size: @mini-font-size;
+                    font-weight: 500;
+                    padding: 0.1rem 0.3rem;
+                    border-left: 0.06rem solid #efefef;
+                    transition: all ease-in-out 300ms;
+                    cursor: pointer;
+                }
+                .active {
+                    border-left: 0.06rem solid #333333;
+                }
             }
-
-            .type {
-              font-size: @mini-font-size;
-              color: #999999;
+        }
+        section {
+            width: 10.6rem;
+            padding-top: 0.65rem;
+            .section-menu {
+                width: 100%;
+                height: 0.62rem;
+                margin-bottom: 0.25rem;
+                background-color: @background-color;
+                display: flex;
+                align-items: center;
+                span {
+                    display: block;
+                    height: 100%;
+                    line-height: 0.62rem;
+                    font-size: 0.18rem;
+                    font-weight: 500;
+                    margin: 0 0.2rem;
+                    transition: all ease-in-out 300ms;
+                    cursor: pointer;
+                }
+                .active {
+                    border-bottom: 0.02rem solid #333333;
+                }
             }
-          }
+            .section-body {
+                width: 100%;
+                padding: 0.2rem 0.18rem;
+                background-color: @background-color;
+                .product {
+                    margin: 0;
+                }
+            }
         }
-
-
-        button {
-          width: 2.08rem;
-          height: .34rem;
-          border-radius: @me-radius  !important;
-          margin: .2rem 0 .3rem;
-        }
-      }
-
-      .person-menu {
-        padding: .1rem .33rem;
-        background-color: @background-color;
-
-        span {
-          display: block;
-          width: .56rem;
-          box-sizing: content-box;
-          font-size: @mini-font-size;
-          font-weight: 500;
-          padding: .1rem .3rem;
-          border-left: .06rem solid #EFEFEF;
-          transition: all ease-in-out 300ms;
-          cursor: pointer;
-        }
-
-        .active {
-          border-left: .06rem solid #333333;
-        }
-      }
     }
-
-    section {
-      width: 10.6rem;
-      padding-top: .65rem;
-
-      .section-menu {
-        width: 100%;
-        height: .62rem;
-        margin-bottom: .25rem;
-        background-color: @background-color;
-        display: flex;
-        align-items: center;
-
-        span {
-          display: block;
-          height: 100%;
-          line-height: .62rem;
-          font-size: .18rem;
-          font-weight: 500;
-          margin: 0 .2rem;
-          transition: all ease-in-out 300ms;
-          cursor: pointer;
-        }
-
-        .active {
-          border-bottom: .02rem solid #333333;
-        }
-      }
-
-      .section-body {
-        width: 100%;
-        padding: .2rem .18rem;
-        background-color: @background-color;
-
-        .product {
-          margin: 0;
-        }
-      }
-    }
-  }
 }
