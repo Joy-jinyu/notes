@@ -1,9 +1,7 @@
 <template>
-    <el-input
-        v-model="inputValue"
-        :placeholder="placeholder"
-        :suffix-icon="suffixIcon"
-    >
+    <el-input v-model="inputValue"
+              :placeholder="placeholder"
+              :suffix-icon="suffixIcon">
         <template #suffix>
             <slot name="suffix"></slot>
         </template>

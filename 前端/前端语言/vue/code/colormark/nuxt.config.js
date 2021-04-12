@@ -5,9 +5,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css) 与项目文件同步加载
@@ -37,13 +37,14 @@ export default {
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
           options: {
-            fix: true,
-          },
+            fix: true
+          }
         })
       }
     },
-    styleResources: { // 设置全局样式，会比项目文件预先加载 [https://github.com/nuxt/nuxt.js/tree/dev/examples/style-resources]
-      less: './css/mixins/index.less',
-    },
+    styleResources: {
+      // 设置全局样式，会比项目文件预先加载 [https://github.com/nuxt/nuxt.js/tree/dev/examples/style-resources]
+      less: './css/mixins/index.less'
+    }
   }
 }

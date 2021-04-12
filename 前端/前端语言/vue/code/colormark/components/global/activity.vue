@@ -1,6 +1,8 @@
 <template>
     <div class="activity-list__item">
-        <img class="activity-img" :src="activity.contImg" alt="" />
+        <img class="activity-img"
+             :src="activity.contImg"
+             alt="" />
         <div class="activity-body">
             <span class="body-title">{{ activity.title }}</span>
             <span class="body-time__range">
@@ -8,20 +10,24 @@
             </span>
             <div class="body-detail">
                 <span>
-                    <img src="@/assets/img/view.png" alt="" />
+                    <img src="@/assets/img/view.png"
+                         alt="" />
                     {{ activity.views }}
                 </span>
                 <color-space />
                 <span>
-                    <img src="@/assets/img/time.png" alt="" />
+                    <img src="@/assets/img/time.png"
+                         alt="" />
                     {{ activity.time }}
                 </span>
                 <span>
-                    <img src="@/assets/img/person.png" alt="" />
+                    <img src="@/assets/img/person.png"
+                         alt="" />
                     {{ activity.person }}
                 </span>
                 <span>
-                    <img src="@/assets/img/like.png" alt="" />
+                    <img src="@/assets/img/like.png"
+                         alt="" />
                     {{ activity.like }}
                 </span>
             </div>

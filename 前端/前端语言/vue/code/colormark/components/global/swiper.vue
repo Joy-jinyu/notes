@@ -1,9 +1,8 @@
 <template>
-    <el-carousel trigger="click" :height="height">
-        <el-carousel-item
-            v-for="(item, index) of swipers"
-            :key="vnodeKey('swiper', index)"
-        >
+    <el-carousel trigger="click"
+                 :height="height">
+        <el-carousel-item v-for="(item, index) of swipers"
+                          :key="vnodeKey('swiper', index)">
             <img :src="item.src" />
         </el-carousel-item>
     </el-carousel>

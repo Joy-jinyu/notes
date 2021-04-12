@@ -9,6 +9,10 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.tabWidth": 4,
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },

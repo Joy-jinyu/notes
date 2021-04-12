@@ -1,26 +1,31 @@
 <template>
     <div class="product-list__item">
-        <img class="product-img" :src="product.contImg" alt="" />
+        <img class="product-img"
+             :src="product.contImg"
+             alt="" />
         <div class="product-body">
             <h4>{{ product.title }}</h4>
             <div class="product-body__detail">
-                <img :src="product.headImg" alt="" />
+                <img :src="product.headImg"
+                     alt="" />
                 <span class="detail-name">{{ product.name }}</span>
                 <span class="detail-body">
                     <span>{{ product.time }}</span>
                     <span>
-                        <img src="@/assets/img/view.png" alt="" />
+                        <img src="@/assets/img/view.png"
+                             alt="" />
                         {{ product.views }}
                     </span>
                     <span>
-                        <img src="@/assets/img/like.png" alt="" />
+                        <img src="@/assets/img/like.png"
+                             alt="" />
                         {{ product.like }}
                     </span>
                 </span>
             </div>
         </div>
     </div>
-</template>
+</template>     
 <script>
 // 空白占位符
 export default {
