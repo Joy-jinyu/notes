@@ -106,4 +106,125 @@
 
  `vscode`对 flow 的检测
 
-### ``
+### `Go To Method`
+
+ 方法跳转
+
+## visual studio code配置
+
+```json
+{
+    "git.path": "D:\\soft\\git\\Git\\bin\\git.exe",
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "editor.tabCompletion": "onlySnippets",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // C:\\Windows\\System32\\cmd.exe
+    "terminal.integrated.shell.windows": "D:\\soft\\git\\Git\\bin\\bash.exe",
+    "terminal.external.windowsExec": "D:\\soft\\git\\Git\\bin\\bash.exe",
+    /// ### [wrap_attributes]
+    /// - auto: 仅在超出行长度时才对属性进行换行。
+    /// - force: 对除第一个属性外的其他每个属性进行换行。
+    /// - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
+    /// - force-expand-multiline: 对每个属性进行换行。
+    /// - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。 
+    // ### [eslint rules](https://cn.eslint.org/docs/rules/),
+    "files.exclude": {
+        "**/.git": false,
+        // "**/.svn": true,
+        // "**/.hg": true,
+        // "**/CVS": true,
+        // "**/.DS_Store": true
+    },
+    "remote.SSH.configFile": "C:\\Users\\Administrator\\.ssh\\config",
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}/src"
+    },
+    "path-intellisense.extensionOnImport": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "path-intellisense.showHiddenFiles": true,
+    "path-intellisense.absolutePathToWorkspace": false,
+    "commentTranslate.targetLanguage": "zh-CN",
+    "css.completion.completePropertyWithSemicolon": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.colorTheme": "Material Theme",
+    "materialTheme.accent": "Bright Teal",
+    "editor.tokenColorCustomizations": {
+        "[Material Theme]": {
+            "comments": "#229977"
+        }
+    },
+    // 【配置参考地址】（https://blog.csdn.net/dscn15848078969/article/details/107578108）
+    "workbench.colorCustomizations": {
+        "terminal.border": "#030202",
+        // 编辑区域背景
+        "editor.background": "#2E2E2E",
+        // 侧边栏
+        "sideBar.foreground": "#999",
+        "sideBar.border": "#2b2b2b",
+        // 侧边栏列表
+        "list.inactiveSelectionBackground": "#32363d",
+        "list.inactiveSelectionForeground": "#dfdfdf",
+        "list.hoverBackground": "#32363d",
+        "list.hoverForeground": "#dfdfdf",
+        "editorError.foreground": "#ff0000"
+    },
+    "bookmarks.navigateThroughAllFiles": false,
+    "leek-fund.funds": [
+        "320007",
+        "001102",
+        "001632",
+        "420009",
+        "003096",
+        "003885",
+        "001071",
+        "005963"
+    ],
+    "leek-fund.stocks": [
+        "sh000001",
+        "sh000300",
+        "sh000016",
+        "sh000688",
+        "hk03690",
+        "hk00700",
+        "usr_ixic",
+        "usr_dji",
+        "usr_inx",
+        "sz002385",
+        "sh600109",
+        "sh601012",
+        "sh600733",
+        "sh600276",
+        "sh600906",
+        "sh601919"
+    ],
+    "material-icon-theme.folders.theme": "specific",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.color": "#26a69a",
+    "material-icon-theme.activeIconPack": "vue_vuex",
+    "material-icon-theme.saturation": 1,
+    "material-icon-theme.hidesExplorerArrows": false,
+    "window.zoomLevel": -1,
+    "cSpell.allowedSchemas": [
+        "file",
+        "gist",
+        "sftp",
+        "untitled",
+        "vue"
+    ],
+    "cSpell.diagnosticLevel": "Error",
+    "cSpell.enableFiletypes": [
+        "vue"
+    ]
+}
+```
+
