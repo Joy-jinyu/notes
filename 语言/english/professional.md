@@ -64,6 +64,18 @@
 
 ---
 
+### Rules
+
+| English | Chinese |
+| :-----: | :-----: |
+|  comma  |  逗号   |
+|  semi   |   半    |
+| indent  |  缩进   |
+
+
+
+---
+
 ### Others
 
 ---
@@ -71,4 +83,6 @@
 |    English    | Chinese |
 | :-----------: | :-----: |
 | precipitation |  沉淀   |
+
+---
 
