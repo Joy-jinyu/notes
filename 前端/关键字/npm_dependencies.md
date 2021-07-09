@@ -12,7 +12,7 @@
 |                         `opn`                          |                    调用浏览器打开网址                    |
 |     [`eslint`](https://cn.eslint.org/docs/rules/)      | <details><summary>代码规则校验</summary>sadasd</details> |
 | [npx](http://www.ruanyifeng.com/blog/2019/02/npx.html) |                          见引用                          |
-|                                                        |                                                          |
+|                         moment                         |                   时间戳和时间转换使用                   |
 |                                                        |                                                          |
 |                                                        |                                                          |
 
