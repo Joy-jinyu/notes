@@ -13,7 +13,7 @@
 |     [`eslint`](https://cn.eslint.org/docs/rules/)      | <details><summary>代码规则校验</summary>sadasd</details> |
 | [npx](http://www.ruanyifeng.com/blog/2019/02/npx.html) |                          见引用                          |
 |                         moment                         |                   时间戳和时间转换使用                   |
-|                                                        |                                                          |
+|                          yarn                          |                          见引用                          |
 |                                                        |                                                          |
 
 ### 引用
@@ -47,3 +47,15 @@
 + `--ignore-existing`：强制使用远程模块，不使用本地模块
 + `-p`：指定要安装的模块
 + `-c`：指定所有命令都由`npx`执行，将环境变量带入要执行的命令（npm 的环境变量带入 npx 命令）
+
+#### yarn
+
+```shell
+npm i -g yarn
+yarn config set global-folder ""
+yarn config set cache-folder ""
+yarn global dir
+yarn global bin
+yarn config set registry https://registry.npm.taobao.com
+```
+
