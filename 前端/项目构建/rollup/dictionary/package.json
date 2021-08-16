@@ -1,0 +1,19 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:amd": "rollup -i index.js -f amd -o ./dist/dist.amd.js",
+    "build:cjs": "rollup -i index.js -f cjs -o ./dist/dist.cjs.js",
+    "build:es": "rollup -i index.js -f es -o ./dist/dist.es.js",
+    "build:iife": "rollup -i index.js -f iife  -n dictionary -o ./dist/dist.iife.js",
+    "build:umd": "rollup -i index.js -f umd  -n dictionary -o ./dist/dist.umd.js",
+    "build:all": "yarn build:amd && yarn build:cjs && yarn build:es && yarn build:iife && yarn build:umd",
+    "build:config": "rollup -c rollup.config.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.5",
+    "rollup": "^2.56.2"
+  }
+}

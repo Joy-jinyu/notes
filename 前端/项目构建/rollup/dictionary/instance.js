@@ -1,5 +1,5 @@
 
-import { label, format, arrayToObject, isEmpty } from 'utils/dictionary'
+import { label, format, arrayToObject, isEmpty } from './utils'
 
 class Dictionary {
     // 字典项数据
