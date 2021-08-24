@@ -14,6 +14,8 @@
 |            [jsDeliver](https://www.jsdelivr.com/)            |                   搭配github搭建自己的图床                   |
 | [UrlChangeTracker](https://tongji.baidu.com/web/help/articleList?type=0&category=17) |                           百度统计                           |
 | [vue-social-share](https://github.com/sinchang/vue-social-share) |                       vue实现社交分享                        |
+|               Monorepo(monolithic repository)                |                                                              |
+|                Multirepo(multiple repository)                |                                                              |
 
 
 
