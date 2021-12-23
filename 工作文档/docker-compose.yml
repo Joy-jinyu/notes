@@ -1,0 +1,35 @@
+version: '3.5'
+services: 
+  redis: 
+    image: "redis:latest"
+    container_name: "easy-redis"
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - /root/redis/redis.conf:/etc/redis/redis.conf
+      - /root/redis/data:/data
+    depends_on:
+      - mongodb
+    command: redis-server /etc/redis/redis.conf --appendonly yes
+  mongodb:
+    image: "mongo:latest"
+    restart: always
+    container_name: "easy-mongodb"
+    ports:
+      - 27017:27017
+    volumes:
+      - /root/mongodb/data/db:/data/db
+      - /root/mongodb/data/configdb:/data/configdb
+  easy-mock:
+    image: "node:latest"
+    restart: always
+    container_name: "easy-mock"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7300:7300
+    depends_on:
+      - mongodb
+      - redis

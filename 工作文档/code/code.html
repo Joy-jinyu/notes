@@ -1,0 +1,87 @@
+<html>
+
+<body>
+    <section>
+        <div class="title">
+            Contact Us
+        </div>
+        <div class="subtitle">Welcome to VIVAIA. We look forward to helping you with your inquiry regarding the products
+            or services that our company offers. </div>
+        <div class="contact-item">
+            <div class="contact-item__title">
+                <span>1.</span>
+                <img src="https://cdnimg.vivaiacollection.com/vivaia_ar/image/fengniao/20211120_3757/liangxi.png" />
+                <span>livechat: <a href="javascript:">Go ahead - start a conversation now!</a></span>
+            </div>
+            <p>Working time:待定</p>
+            <p>Our LiveChat is only for pre-sale issues. Any after-sale issues, please email us.</p>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item__title">
+                <span>2.</span>
+                <img src="https://cdnimg.vivaiacollection.com/vivaia_ar/image/fengniao/20211120_3757/message.png" />
+                <span>Email us: <a href="javascript:">ar.support@vivaiacollection.com</a></span>
+            </div>
+            <p>If you require any assistance, please email us. We will reply to you within 24 hours and solve the issue
+                to your satisfaction.</p>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item__title">
+                <span>3.</span>
+                <img src="https://cdnimg.vivaiacollection.com/vivaia_ar/image/fengniao/20211120_3757/phone.png" />
+                <span>WhatsApp: <a href="javascript:" class="whatsapp-link">Chat with our agent now!</a></span>
+            </div>
+            <p>WhatsApp关联号码008619857009894</p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        (function () {
+            document.querySelector(".whatsapp-link").addEventListener("click", function () {
+                //获得窗口的垂直位置 
+                var iTop = (window.screen.availHeight - 30 - 600) / 2;
+                //获得窗口的水平位置 
+                var iLeft = (window.screen.availWidth - 10 - 600) / 2;
+                window.open("https://api.whatsapp.com/send/?phone=443333110802&text&app_absent=0",
+                    "newwindow",
+                    `height=600, width=600, top=${iTop}, left=${iLeft},toolbar=no, menubar=no, scrollbars=no, resizable=no, location=n o, status=no`)
+            })
+        })()
+    </script>
+    <style>
+        section {
+            width: 100%;
+            line-height: 1.4;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .contact-item .contact-item__title * {
+            display: inline-block;
+        }
+
+        .contact-item .contact-item__title img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .contact-item p {}
+    </style>
+</body>
+
+</html>
