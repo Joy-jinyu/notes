@@ -1,0 +1,29 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "joy develop template",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon app.js"
+  },
+  "keywords": [
+    "koa2"
+  ],
+  "author": "jinyuk@foxmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "koa2-cors": "^2.0.6",
+    "mongodb": "^3.6.2"
+  },
+  "devDependencies": {
+    "koa-webpack-dev-middleware": "^2.0.2",
+    "koa-webpack-hot-middleware": "^1.0.3",
+    "koa-webpack-middleware": "^1.0.7",
+    "webpack": "^3.0.0",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
