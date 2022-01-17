@@ -1,0 +1,5 @@
+#component-container .adyen-checkout__label__text{
+  /* font-size:inherit;
+  color: #666; */
+  display: none;
+}

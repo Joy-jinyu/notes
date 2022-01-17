@@ -1,0 +1,176 @@
+{
+    "name": "starlinke-checkout",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@babel/core": "7.8.4",
+        "@babel/polyfill": "^7.12.1",
+        "@sentry/react": "^6.9.0",
+        "@sentry/tracing": "^6.9.0",
+        "@svgr/webpack": "4.3.3",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@typescript-eslint/eslint-plugin": "^2.10.0",
+        "@typescript-eslint/parser": "^2.10.0",
+        "axios": "^0.19.2",
+        "babel-eslint": "10.0.3",
+        "babel-jest": "^26.6.0",
+        "babel-loader": "8.0.6",
+        "babel-plugin-named-asset-import": "^0.3.6",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-react-app": "^9.1.1",
+        "camelcase": "^5.3.1",
+        "case-sensitive-paths-webpack-plugin": "2.3.0",
+        "classnames": "^2.2.6",
+        "core-js": "2",
+        "css-loader": "3.4.2",
+        "dotenv": "8.2.0",
+        "dotenv-expand": "5.1.0",
+        "eslint": "^6.6.0",
+        "eslint-config-react-app": "^5.2.0",
+        "eslint-loader": "3.0.3",
+        "eslint-plugin-flowtype": "4.6.0",
+        "eslint-plugin-import": "2.20.0",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.18.0",
+        "eslint-plugin-react-hooks": "^1.6.1",
+        "file-loader": "4.3.0",
+        "fs-extra": "^8.1.0",
+        "html-webpack-plugin": "4.0.0-beta.11",
+        "i18next": "^19.4.0",
+        "identity-obj-proxy": "3.0.0",
+        "jest": "26.6.0",
+        "jest-circus": "26.6.0",
+        "jest-resolve": "26.6.0",
+        "jest-watch-typeahead": "0.6.1",
+        "js-sha256": "^0.9.0",
+        "mini-css-extract-plugin": "0.9.0",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "pnp-webpack-plugin": "1.6.0",
+        "postcss-flexbugs-fixes": "4.1.0",
+        "postcss-loader": "3.0.0",
+        "postcss-normalize": "8.0.1",
+        "postcss-preset-env": "6.7.0",
+        "postcss-safe-parser": "4.0.1",
+        "rc-dialog": "^7.6.0",
+        "react-app-polyfill": "^1.0.6",
+        "react-dev-utils": "^10.2.0",
+        "react-i18next": "^11.3.4",
+        "react-payment-inputs": "^1.1.2",
+        "resolve": "1.15.0",
+        "resolve-url-loader": "3.1.1",
+        "sass-loader": "8.0.2",
+        "semver": "6.3.0",
+        "style-loader": "0.23.1",
+        "styled-components": "^5.0.1",
+        "terser-webpack-plugin": "2.3.4",
+        "ts-pnp": "1.1.5",
+        "ua-parser-js": "0.7.28",
+        "url-loader": "2.3.0",
+        "webpack": "4.41.5",
+        "webpack-dev-server": "3.10.2",
+        "webpack-manifest-plugin": "2.2.0",
+        "workbox-webpack-plugin": "4.3.1"
+    },
+    "scripts": {
+        "start": "cross-env DOMAIN=checkout-test.starservices.store node scripts/start.js",
+        "build": "cross-env PUBLIC_URL=//static.starservices.store/checkout DOMAIN=checkout.starservices.store REPORT_DOMAIN=dot.cloudsdlk.com node scripts/build.js",
+        "dev": "cross-env PUBLIC_URL=//onepageharvey.ngrok.starservices.store/checkout DOMAIN=onepageharvey.ngrok.starservices.store REPORT_DOMAIN=localhost node scripts/build.js",
+        "dev2": "cross-env PUBLIC_URL=//onepagedev.ngrok.starservices.store/checkout cross-env DOMAIN=onepagedev.ngrok.starservices.store REPORT_DOMAIN=localhost node scripts/build.js",
+        "test": "node scripts/test.js",
+        "build-test": "PUBLIC_URL=//static-test.starservices.store/checkout DOMAIN=checkout-test.starservices.store REPORT_DOMAIN=localhost node scripts/build.js",
+        "build-beta": "PUBLIC_URL=//checkout-beta.starservices.store/checkout DOMAIN=checkout-beta.starservices.store REPORT_DOMAIN=localhost node scripts/build.js",
+        "build-temp": "PUBLIC_URL=//checkout-temp.starservices.store/checkout DOMAIN=checkout-temp.starservices.store REPORT_DOMAIN=localhost node scripts/build.js"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ],
+        "rules": {
+            "no-undef": "off",
+            "no-restricted-globals": "off",
+            "no-unused-vars": "off"
+        }
+    },
+    "browserslist": {
+        "production": [
+            "> 1%",
+            "last 2 versions",
+            "not ie <= 8",
+            "Android >= 4.4",
+            "iOS >= 10"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.d.ts"
+        ],
+        "setupFiles": [
+            "react-app-polyfill/jsdom"
+        ],
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/setupTests.js"
+        ],
+        "testMatch": [
+            "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+            "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+        ],
+        "testEnvironment": "jsdom",
+        "testRunner": "/Users/Raymond/node/test-act/node_modules/jest-circus/runner.js",
+        "transform": {
+            "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
+            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+            "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+        },
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+            "^.+\\.module\\.(css|sass|scss)$"
+        ],
+        "modulePaths": [],
+        "moduleNameMapper": {
+            "^react-native$": "react-native-web",
+            "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+        },
+        "moduleFileExtensions": [
+            "web.js",
+            "js",
+            "web.ts",
+            "ts",
+            "web.tsx",
+            "tsx",
+            "json",
+            "web.jsx",
+            "jsx",
+            "node"
+        ],
+        "watchPlugins": [
+            "jest-watch-typeahead/filename",
+            "jest-watch-typeahead/testname"
+        ],
+        "resetMocks": true
+    },
+    "babel": {
+        "presets": [
+            "react-app"
+        ]
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "react-test-renderer": "^17.0.2",
+        "sass": "^1.45.0",
+        "webpack-bundle-analyzer": "^3.8.0"
+    },
+    "resolutions": {
+        "@babel/preset-env": "^7.8.0"
+    }
+}

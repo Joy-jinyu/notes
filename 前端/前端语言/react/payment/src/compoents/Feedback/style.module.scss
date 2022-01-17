@@ -1,0 +1,73 @@
+@import "../commt.scss";
+.feedback {
+    padding: r(10) 0;
+    .modal {
+        padding: r(25);
+    }
+    .text {
+        color: #333;
+        margin-bottom: r(5);
+        font-size: r(15);
+    }
+    .link {
+        display: inline-block;
+        border-bottom:1px dashed rgba(0, 0, 0, 0.5);
+        line-height:1.2;
+        transition: all 0.2s;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        &:hover {
+            color: #111;
+            border-bottom:1px dashed #111;
+        }
+    }
+    .main {
+        box-sizing: border-box;
+        li {
+            box-sizing: border-box;
+            .radio {
+                transition: border-color 0.5s;
+                white-space: inherit;
+                padding: r(6) 0;
+                text-align: left;
+                line-height: 1.4;
+                align-items: flex-start;
+            }
+        }
+        .radiotext {
+            display: flex;
+        }
+        .textareaBox {
+            padding: 0 r(25);
+            display: flex;
+            > i {
+                padding: 0 r(3);
+                color: $error;
+            }
+        }
+        textarea {
+            transition: border-color 0.5s;
+            border: 1px solid #eee;
+            box-sizing: border-box;
+            padding: r(10);
+            resize: none;
+            width: 100%;
+            font-size: r(14);
+        }
+    }
+    .isError {
+        textarea {
+            border-color: $error;
+        }
+        > input {
+            border-color: $error;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .feedback {
+        .modal {
+            width: 100%;
+        }
+    }
+}

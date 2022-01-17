@@ -1,0 +1,65 @@
+@import "../../commt.scss";
+.box {
+    font-size: r(14);
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: r(20);
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    line-height: 1;
+    .left {
+        margin-right: r(20);
+        > svg {
+            width: r(24);
+            height: r(24);
+        }
+    }
+    .right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .right_top_1 {
+            font-size: r(18);
+            font-weight: bold;
+            color: #000;
+            margin-bottom: r(8);
+        }
+        .right_bottom {
+            font-weight: bold;
+            margin-top: r(15);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.isMobile{
+    padding: r(15) 0;
+    border: none;
+    font-size: r(12);
+    color:#000;
+    line-height: 1.4;
+    border-bottom: 1px solid #e1e1e1;
+    .left {
+        margin-right: r(15);
+    }
+    .right{
+        .right_top_1,.right_bottom{
+            display:none
+        }
+    }
+}
+._rtl {
+    .left {
+        margin-right: 0;
+        margin-left: r(20);
+    }
+}
+@media (max-width: 750px){
+    ._rtl {
+        .left {
+            margin-right: 0;
+            margin-left: r(15);
+        }
+    }
+}

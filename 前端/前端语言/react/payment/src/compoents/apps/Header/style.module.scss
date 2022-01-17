@@ -1,0 +1,21 @@
+@import "../../commt.scss";
+.back{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: r(14);
+}
+.top {
+  width: 100%;
+  // background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 r(20);
+  line-height: 1;
+}
+.logo{
+  img{
+    max-height: r(32);
+  }
+}

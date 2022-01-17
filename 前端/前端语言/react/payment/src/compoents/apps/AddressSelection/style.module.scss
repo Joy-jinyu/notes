@@ -1,0 +1,109 @@
+@import "../../commt.scss";
+
+.method {
+    min-height: r(53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 4px;
+    margin: 0px 0.35rem;
+    padding: 0 1.14286rem;
+    .car {
+      display: table-cell;
+      vertical-align: middle;
+      white-space: nowrap;
+      padding-right: 0.4em;
+    }
+    .text {
+      display: table-cell;
+      font-size: 0.875rem;
+      line-height: 1.3em;
+      color: rgb(227, 44, 43);
+      vertical-align: middle;
+    }
+    .methodList{
+      width: 100%;
+      color: #333;
+      li{
+        height: r(40);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        &:last-child{
+          border-bottom: none;
+        }
+        span{
+          vertical-align: top;
+          opacity: 0.8;
+          line-height: 1.6em;
+        }
+        .radiotext{
+          max-width: r(460);
+          width: r(240);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          display: block;
+        }
+        @media (min-width: 600px) {
+          .radiotext{
+            width: r(500);
+          }
+        }
+        @media (min-width: 1100px) {
+          .radiotext{
+            width: r(300);
+          }
+        }
+        @media (min-width: 1300px) {
+          .radiotext{
+            width: r(370);
+          }
+        }
+        .price{
+          opacity: 1;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .error{
+    border: 1px solid $error !important;
+    box-shadow: $error 0 0 0 1px !important;
+    .labelTopFocus{
+      color: $error;
+      }
+  }
+  .loading {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: r(10);
+      height: r(10);
+      border: r(2) solid #aaa;
+      border-left-color: transparent;
+      margin-left: r(10);
+      border-radius: 50%;
+      animation: rotation 0.8s linear infinite;
+      -webkit-animation: rotation 0.8s linear infinite;
+    }
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0)
+    }
+    to {
+      transform: rotate(360deg)
+    }
+  }
+  @-webkit-keyframes rotation {
+    from {
+      -webkit-transform: rotate(0)
+    }
+    to {
+      -webkit-transform: rotate(360deg)
+    }
+  }

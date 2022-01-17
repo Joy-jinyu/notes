@@ -1,0 +1,21 @@
+@import "../../commt.scss";
+.step {
+    font-size: r(20);
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    margin:r(30) 0 r(17);
+    user-select: none;
+    svg{
+        width: r(32);
+        height: r(32);
+    }
+    .title{
+        margin:0 r(15);
+        font-family: 'Playfair Display', serif;
+    }
+    .step_left{
+        display: flex;
+        align-items: center;
+    }
+}

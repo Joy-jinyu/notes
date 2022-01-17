@@ -1,0 +1,162 @@
+@import "../../commt.scss";
+
+.collapseTitle {
+    cursor: pointer;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: r(14) 0;
+    border-radius: r(5);
+    height: r(59);
+
+    .titleLeft {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        flex-direction: column;
+
+        img {
+            max-height: r(22);
+        }
+    }
+
+    .subhead {
+        padding-bottom: r(5);
+        // font-size: 14px;
+        // color: #777;
+    }
+
+    .mainLength {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.angle {
+    //直角组题
+    border-radius: 0;
+    padding: r(24) r(12);
+}
+.apptheme {
+    cursor: pointer;
+    display: flex;
+    padding: r(24) 0;
+    color: #0d0d0d;
+    font-size: r(14);
+    font-weight: bold;
+    align-items: center;
+    .subhead{
+        color: #777;
+        font-weight: initial;
+    }
+}
+.angle,
+.apptheme {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 r(18);
+    }
+}
+.title {
+    display: flex;
+    align-items: center;
+    padding: r(3) 0;
+}
+.icons {
+    margin-top: r(9);
+}
+.discountBox {
+    display: flex;
+    .discount {
+        border-radius: r(2);
+        color: $vivaiaTheme;
+        border: 1px solid #F5EEE9;
+        background: #fff9f9;
+        font-size: r(11);
+        font-weight: 700;
+        padding: 0 r(2);
+        white-space: nowrap;
+        margin: 0 r(8);
+        max-height: r(20);
+    }
+    .discountText {
+        font-size: r(11);
+        color: #999;
+        font-weight: normal;
+    }
+}
+.pay_pal_credit_box {
+    display: flex;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: r(10) 1px r(6) r(6);
+    border-radius: r(3);
+    margin-top: r(8);
+    width: max-content;
+}
+.paypal_logo {
+    position: absolute;
+    width: r(56);
+    height: r(15);
+    top: r(-9);
+    background-color: #fff;
+    padding: 0 r(4);
+}
+.afterpay_title{
+    display: flex;
+    align-items: center;
+    >span{
+        margin-right: r(5);
+    }
+}
+@media screen and (max-width: 750px) {
+    .collapseTitle {
+        padding: r(16) 0;
+    }
+    .icons {
+        > span {
+            width: r(31);
+            height: r(20);
+        }
+    }
+
+    .pay_pal_credit_box {
+        padding: r(7) 0 r(4) r(5);
+        margin-top: r(7);
+    }
+    .paypal_logo {
+        width: r(37);
+        height: r(10);
+        top: r(-6);
+    }
+
+    .angle {
+        padding: r(16) r(12);
+    }
+    .apptheme {
+        padding: r(16) 0;
+        justify-content: space-between;
+    }
+
+    .angle,
+    .apptheme {
+        .main {
+            padding: 0;
+        }
+    }
+    .afterpay_title{
+        >span{
+            width:r(180);
+            margin-right: 0;
+        };
+    }
+}
+.cardImgBox {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,111 @@
+@import "../commt.scss";
+.boxParent{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background-color: transparent;
+}
+.box{
+  padding: r(7);
+  box-sizing: border-box;
+  font-size: r(14);
+  line-height: 1.3em;
+  overflow: hidden;
+}
+.labelBox {
+  border: 1px solid rgb(217, 217, 217);
+  box-shadow: none;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border-radius: r(5);
+  transition: all 0.2s ease-out 0s;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: r(18);
+  .labelTopFocus {
+    opacity: 0;
+    transform: translateY(3px);
+    color: rgb(51, 51, 51);
+    font-size: 0.85714em;
+    font-weight: normal;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-left: 1px;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 0px 0.91667em;
+    overflow: hidden;
+    transition: all 0.2s ease-out 0s;
+  }
+}
+.isFocus,.error{
+  .labelTopFocus{
+    opacity: 0.75;
+    transform: none;
+    }
+    .defIndex{
+      padding: 0px 0.78571em 0.2em;
+      margin-top: 1.444em;
+      outline: none;
+    }
+}
+.error{
+  border: 1px solid $error !important;
+  box-shadow: $error 0 0 0 1px !important;
+  .labelTopFocus{
+    color: $error;
+    }
+}
+.defIndex {
+  padding: 0.822em 0.78571em;
+  display: block;
+  cursor: text;
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  text-align: start;
+  text-shadow: none;
+  text-indent: 0px;
+  text-transform: none;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  width: 100%;
+  word-break: normal;
+  font: inherit;
+  border-radius: r(5);
+  margin: 0px;
+  transition: all 0.2s ease-out 0s;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  -webkit-writing-mode: horizontal-tb;
+}
+
+.angle,.appTheme {//直角主题
+  .labelBox,.defIndex{
+    border-radius: 0;
+  }
+}
+@media (min-width: 750px){
+  .onFocus{
+    border: 1px solid $theme;
+    box-shadow: $theme 0 0 0 1px;
+  }
+  .labelBox {
+    &:hover{
+      border: 1px solid $theme;
+      box-shadow: $theme 0 0 0 1px;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "../commt.scss";
+.boxParent{
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: r(14);
+}
+.box {
+  padding: 0.43em;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  line-height: 1.3em;
+  background-color: transparent;
+  overflow: hidden;
+}
+.labelTopFocus {
+  font-size: 0.85714em;
+  font-weight: normal;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  margin-top: 0.3em;
+  margin-left: 1px;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  transform: none;
+  z-index: 2;
+  padding: 0px 0.91667em;
+  overflow: hidden;
+  transition: all 0.2s ease-out 0s;
+  opacity: 0.75;
+  // text-align: left;
+}
+.labelBox {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+.selectBox {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  select {
+    appearance:none;
+    color: rgb(51, 51, 51);
+    background-color: #fff;
+    cursor: default;
+    outline-width: 0px;
+    background-clip: padding-box;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    word-break: normal;
+    text-transform: none;
+    -webkit-appearance: none;
+    padding: 1.393em 0.78571em 0.25em;
+    border-radius: r(5);
+    font: inherit;
+    margin: 0px;
+    transition: all 0.2s ease-out 0s;
+    border: 1px solid rgb(217, 217, 217);
+    box-shadow: none;
+    option {
+      background-color: rgb(255, 255, 255);
+      color: rgb(51, 51, 51);
+      font-weight: normal;
+      display: block;
+      white-space: pre;
+      min-height: 1.2em;
+      word-break: normal;
+      text-transform: none;
+      line-height: normal;
+      padding: 0px r(2) r(1);
+    }
+  }
+}
+.jiantou {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: r(10);
+  bottom: 0px;
+  padding: 0px;
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  svg{
+    width: r(10);
+    transform:rotate(-90deg);
+  }
+}
+._rtl{
+  .jiantou {
+    left: r(10);
+    right:auto;
+  }
+}
+.onFocus {
+  label {
+    opacity: 1;
+  }
+}
+.angle,.appTheme {//直角主题
+  .selectBox select{
+    border-radius: 0;
+  }
+}
+.hasTitle{
+  select{
+    border-radius: 0;
+    padding: 0.8215em 0.78571em;
+  }
+  .labelBox{
+    display:none
+  }
+  .title{
+    display:flex;
+    align-items: center;
+    // font-size: r(12);
+    // margin-bottom: r(6);
+  }
+}
+.error>select{
+  border: 1px solid $error !important;
+  box-shadow: $error 0 0 0 1px !important;
+  .labelTopFocus{
+    color: $error;
+    }
+}
+.title{
+  display:none;
+  font-size: r(12);
+  margin-bottom: r(6);
+  height: r(18);
+}
+@media (min-width: 750px){
+  .onFocus {
+    select {
+      border: 1px solid $theme;
+      box-shadow: $theme 0 0 0 1px;
+    }
+  }
+  .selectBox {
+    select {
+      &:hover{
+        border: 1px solid $theme;
+        box-shadow: $theme 0 0 0 1px;
+      }
+    }
+  }
+}

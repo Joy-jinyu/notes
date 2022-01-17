@@ -1,0 +1,79 @@
+@import "../commt.scss";
+.s-button {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  color: #1f2d3d;
+  margin: 0;
+  padding: 0 r(14);
+  border-radius: r(4);
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.1s;
+  min-height: r(40);
+  &:hover,
+  &:focus {
+    color: $theme;
+    border-color: $theme;
+    opacity: 0.9;
+  }
+  &:active{
+    opacity: 1;
+  }
+}
+.text{
+  display: inline-flex;
+  align-items: center;
+}
+.s-button-primary {
+  color: #fff;
+  background-color: $theme;
+  border-color: $theme;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+.s-button-green {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-color: $green;
+  }
+}
+.s-button-black {
+  color: #fff;
+  background-color: $black;
+  border-color: $black;
+  border-radius: r(2);
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+.isLoading{
+  opacity: 0.5;
+  cursor: wait;
+  &:hover,
+  &:focus,&:active {
+    opacity: 0.5;
+  }
+}
+button{
+  &:disabled{
+    opacity: 0.5;
+    cursor: no-drop;
+    &:hover,
+    &:focus,&:active {
+      opacity: 0.5;
+    }
+  }
+}

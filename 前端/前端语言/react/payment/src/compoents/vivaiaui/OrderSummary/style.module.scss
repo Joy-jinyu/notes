@@ -1,0 +1,102 @@
+@import "../../commt.scss";
+.title {
+    color:#000;
+    font-weight: bold;
+    font-size: r(16);
+    margin-bottom: r(30);
+}
+.box {
+    max-height: r(240);
+    overflow-y: scroll;
+    border-bottom: 1px solid #E1E1E1;
+    li {
+        font-size: r(12);
+        color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        margin-bottom: r(15);
+        box-sizing: border-box;
+        line-height: 1;
+        .left {
+            position: relative;
+            .imgBox {
+                width: r(80);
+                height: r(80);
+                position: relative;
+                overflow: hidden;
+                background-color: #f1f1f1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                > img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .gift {
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                font-size: r(12);
+                font-weight: bold;
+                color: #fff;
+                height: r(20);
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .right {
+            color: #2f2f2f;
+            font-size: r(14);
+            margin: 0 r(10);
+            .right_1 {
+                font-weight: 600;
+                margin-top: r(3);
+                margin-bottom: r(10);
+                -webkit-box-orient: vertical;
+                max-width: r(190);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .right_2 {
+                opacity: 0.6;
+                font-size: r(12);
+                margin-bottom: r(10);
+            }
+            .right_3 {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+.noStock {
+    opacity: 0.6;
+    .right_1 {
+        text-decoration: line-through;
+    }
+}
+.badge {
+    font-size: 0.7em;
+    font-weight: 500;
+    line-height: 1.75em;
+    white-space: nowrap;
+    text-align: center;
+    background-color: rgb(115, 115, 115);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    min-width: 1.75em;
+    height: 1.75em;
+    z-index: 3;
+    border-radius: 1.75em;
+    padding: 0px 0.58333em;
+}
+.stockout {
+    background-color: #dc2222;
+    padding: 1em 0.7em;
+    border-radius: r(5);
+    display: flex;
+    align-items: center;
+}

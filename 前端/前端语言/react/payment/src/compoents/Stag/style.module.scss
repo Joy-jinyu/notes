@@ -1,0 +1,36 @@
+@import "../commt.scss";
+.box{
+    display: inline-flex;
+    align-items: center;
+    border-radius: r(4);
+    background-color: rgba(113,113,113,0.11);
+    color: #323232;
+    font-size: 0.85714em;
+    padding: 0.75em;
+    overflow: hidden;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.1s;
+    >div{
+        display: inline-flex;
+    }
+    .left{
+        margin-right: r(5);
+        >svg{
+            width: r(18);
+            opacity:0.7;
+        }
+    }
+    .right{
+        margin-left: 0.85714em;
+        cursor: pointer;
+        opacity: 0.6;
+        >svg{
+            width: r(11);
+            height: r(11);
+        };
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

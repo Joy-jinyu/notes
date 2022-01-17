@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="https://cdn.shopify.com/s/files/1/0105/1705/3502/files/l_32x32.png?v=1576045696" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Shopify Checkout" />
+
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Shopify Checkout</title>
+  <link rel="stylesheet" href="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.8.1/adyen.css"
+    integrity="sha384-y1lKqffK5z+ENzddmGIfP3bcMRobxkjDt/9lyPAvV9H3JXbJYxCSD6L8TdyRMCGM" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="root">
+    <style>html, body, p {          margin: 0;          padding: 0;        }   .blink {display: none;}
+      @media screen and (max-device-width: 640px) {
+        .blink {
+          display: block;
+        }
+        ._spinner_ {display: none;}
+      }   html, body {          width: 100%;          height: 100%;          overflow: hidden;        }        p {          position: absolute;        }      </style><style>      @keyframes blink {        0% {          opacity: .4;        }        50% {          opacity: 1;        }        100% {          opacity: .4;        }      }      .blink {        animation-duration: 2s;        animation-name: blink;        animation-iteration-count: infinite;      }    </style>      <p class="blink" style="z-index: 0;border-radius: 0% / 0%;background: rgb(238, 238, 238);width: 100%;padding-bottom: 201.019%;margin-top: 0%;"></p><p class="blink" style="z-index: 1;border-radius: 1.14% / 1.196%;background: rgb(255, 255, 255);width: 93.607%;padding-bottom: 89.176%;left: 3.197%;margin-top: 3.997%;"></p><p class="blink" style="z-index: 2;background: #EEEEEE;width: 11.217%;padding-bottom: 3.623%;left: 7.462%;margin-top: 10.266%;"></p><p class="blink" style="z-index: 3;border-radius: 50%;background: rgb(255, 255, 255);width: 4.797%;padding-bottom: 4.797%;left: 87.742%;margin-top: 12.745%;"></p><p class="blink" style="z-index: 4;background: #EEEEEE;width: 11.217%;padding-bottom: 3.623%;left: 7.462%;margin-top: 32.56%;"></p><p class="blink" style="z-index: 5;border-radius: 50%;background: rgb(255, 255, 255);width: 4.797%;padding-bottom: 4.797%;left: 87.742%;margin-top: 35.039%;"></p><p class="blink" style="z-index: 6;background: #EEEEEE;width: 11.217%;padding-bottom: 3.623%;left: 7.462%;margin-top: 54.854%;"></p><p class="blink" style="z-index: 7;border-radius: 50%;background: rgb(255, 255, 255);width: 4.797%;padding-bottom: 4.797%;left: 87.742%;margin-top: 57.333%;"></p><p class="blink" style="z-index: 8;background: #EEEEEE;width: 11.217%;padding-bottom: 3.623%;left: 7.462%;margin-top: 77.147%;"></p><p class="blink" style="z-index: 9;border-radius: 50%;background: rgb(255, 255, 255);width: 4.797%;padding-bottom: 4.797%;left: 87.742%;margin-top: 79.627%;"></p><p class="blink" style="z-index: 10;border-radius: 1.14% / 2.116%;background: rgb(255, 255, 255);width: 93.607%;padding-bottom: 50.419%;left: 3.197%;margin-top: 95.837%;"></p><p class="blink" style="z-index: 11;background: #EEEEEE;width: 11.591%;padding-bottom: 3.623%;left: 7.462%;margin-top: 101.042%;"></p><p class="blink" style="z-index: 12;background: #EEEEEE;width: 75.394%;padding-bottom: 3.14%;left: 7.462%;margin-top: 107.635%;"></p><p class="blink" style="z-index: 13;background: #EEEEEE;width: 23.913%;padding-bottom: 3.14%;left: 7.462%;margin-top: 121.867%;"></p><p class="blink" style="z-index: 14;background: #EEEEEE;width: 20.841%;padding-bottom: 3.14%;left: 7.462%;margin-top: 127.14%;"></p><p class="blink" style="z-index: 15;background: #EEEEEE;width: 15.848%;padding-bottom: 5.314%;left: 76.691%;margin-top: 135.613%;"></p><p class="blink" style="z-index: 16;background: #EEEEEE;width: 6.81%;padding-bottom: 3.14%;left: 46.595%;margin-top: 153.887%;"></p><p class="blink" style="z-index: 17;border-radius: 0% / 0%;background: rgb(238, 238, 238);width: 100%;padding-bottom: 20.969%;margin-top: 156.809%;"></p><p class="blink" style="z-index: 18;border-radius: 28.488% / 208.363%;background: rgb(13, 13, 13);width: 93.607%;padding-bottom: 12.798%;left: 3.197%;margin-top: 158.941%;"></p><p class="blink" style="z-index: 19;background: #EEEEEE;width: 35.56%;padding-bottom: 4.106%;left: 32.22%;margin-top: 163.289%;"></p>      
+    <div class="_spinner_">
+      <div class="spinWrap">
+        <p class="spinnerImage"></p>
+        <p class="loader"></p>
+      </div>
+    </div>
+  </div>
+  <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=Ad-nK7JeYsP0Kb4q4wyqVnaSzNJE3FWkuqV2ZdzdMsSwEdr4Xcrgb3mVpMp8_ErAHkMt0QJ3LXxv0fNn&components=messages,buttons&commit=false"></script>
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLF-k5W1SHFHbLCpihVwab6PbTYmCnLNc&libraries=places"></script>
+  <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLF-k5W1SHFHbLCpihVwab6PbTYmCnLNc&libraries=places"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{.GoogleAccountId}}');
+  </script>
+  <script type="text/javascript">
+    window.shopify_checkouts = window.shopify_checkouts ||
+      {
+        // error_msg: "RECEIVING_PREFERENCE_MANDATES_MANUAL_ACTION",//初始化的时候是否显示错误
+        order: {
+          ui_version: 'd',
+          trans_id: 1223,
+          // special_zero:true,//是否为0元购
+          address: {
+            can_changed:true,//不能修改
+            address1: "4129 Davis Court",
+            address2: "",
+            city: "Valmeyer",
+            company: "",
+            country: "US",//KW
+            country_name: "Mexico",
+            first_name: "Herman",
+            last_name: "Rhodes",
+            latitude: 0,
+            longitude: 0,
+            name: "Herman Rhodes",
+            phone: "6189356020",
+            postal_code: "62295",
+            province: "AL",
+            province_name: "province_name",
+          },
+          // shippingMethods:[{id: 1615864388, methodName: "free test", price: "100"}],//GALAXY使用才会用到
+          shipping_rate_id: 0,
+          orderNumber: 0,
+          shipping_child_id: '',
+          payment_method:'',//pay_pal,credit_card
+          payment_gate_way: '',//
+          email: '642702011@qq.com',
+          // uuid: "64096dc7-692e-4483-a40d-7ac0d03e217a",//starlink-dev
+          uuid: "02525fc9-7211-4cf7-b8d6-306f4d1e54fd",//checkoutfive
+          discounts: [
+            { price: "-$0.01", title: "Coupon Discount" },
+          ],
+          language: "en", total_price: 7.82,
+          discountCode: "ZESBJIRC2R7Q",
+          discountAmount: 0.01, total_quantity: 2,
+          free_shipping_methods: "1,3,4",
+          items: [{ price: 2.8, product_id: 4294411059339, quantity: 1, sku: "CJXFSPSP00002-500 games-HDMI without box-EU", title: "RETRO GAMER 600 Classical Games - 500 games / HDMI without box / EU", variant_id: 37525720039606, variant_title: "500 games / HDMI without box / EU", url: "/products/retro-gamer-600-classical-games?variant=30944705904779", image: "https://cdn.shopify.com/s/files/1/0076/7570/7463/products/156252310112.png?v=1572166112", original_price: 280, line_price: 280, original_line_price: 280, final_price: 280, final_line_price: 280 }, { price: 31.76, product_id: 4294020399243, quantity: 1, sku: "30737565-picture-color-xxl", title: "2019 New Two Pieces Set Fashion Hooded Sweatshirts ddddSportswear Men Tracksuit Hoodie Autumn Brand Clothes Hoodies+Pants men sets Cool - Picture color / XXL", variant_id: 30943313395851, variant_title: "Picture color / XXL", url: "/products/2019-new-two-pieces-set-fashion-hooded-sweatshirts-sportswear-men-tracksuit-hoodie-autumn-brand-clothes-hoodies-pants-men-sets?variant=30943313395851", image: "https://cdn.shopify.com/s/files/1/0076/7570/7463/products/product-image-1160954117.jpg?v=1572061809", original_price: 31.76, "line_price": 31.76, original_line_price: 31.76, final_price: 31.76, final_line_price: 31.76 }],
+          currency: "USD",
+          items_subtotal_price: 7.82,
+          cpf: '',
+          gifSku: [{
+            image: 'https://cdn.shopify.com/s/files/1/0076/7570/7463/products/156252310112.png?v=1572166112',
+            name: 'Round small black',
+            options: [{
+              id: 3,
+              name: "color",
+              value_id: 777,
+              value_name: "sea"
+            }],
+            price: '$0.00',
+            originPrice: '$99.00'
+          }],
+          test: { "email": "joey@example.com", "subscribe": true, "first_name": "Joe", "last_name": "Jones", "address1": "33 Lane Rd", "address2": "Apartment 3", "city": "Wanaque", "country": "US", "province": "NJ", "postal_code": "31331", "phone": "9193313313", "country_name": "United States", "provinceName": "New Jersey" }
+        },
+        shop: {
+          // identity_code: "brs6k5jipt3a6ah5j8dg",//starlink-dev
+          identity_code: "brs6k5jipt3a6ah5j8dg",//checkoutfive
+          // csrf_token: "3389e991-4366-4070-b1e0-96d81457a57d",//starlink-dev
+          csrf_token: "559f948a-1a86-40d0-b665-7c2099040d39",//checkoutfive
+          domain: "starlink-dev.myshopify.com",//checkoutnotwo.myshopify.com
+          // logo: 'https://s3.amazonaws.com/opc.www.227/bgfiawdhawwubxlzag9wawz5lmnvbq/logo_ck499t9hclcmoxpefcztqd0wp.png',
+          logo: 'https://uidesign.zafcdn.com/ZF/image/banner/20180920_5141/logo_115x50.png',
+          name: "starlink-dev.myshopify.com",//checkoutnotwo.myshopify.com、harbor-test.insunlinen.com
+          platform_name: "SHOPIFY",//HARBOR/SHOPIFY/GALAXY
+          // font_family: 'Futura, Helvetica',
+          default_country: "US",
+          pay_pal_credit_is_active: true,
+          pay_pal_is_active: true,
+          promotion_is_active: true,
+        }
+      }
+      // order: JSON.parse({{.CombineInfo}})
+  </script>
+  <script src="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.8.1/adyen.js"
+    integrity="sha384-rGkZxBRhUfCECwNuNrllGf8dOpeUsKTMqczAkphoWMne67C32+na/29lUGT3HVOB" crossorigin="anonymous"
+    async></script>
+  <script src="https://cdn.checkout.com/js/framesv2.min.js" id="checkout"></script>
+
+  <script type="text/javascript"
+    id="6695680e65d4">(function () { var eu = "g68x4yj4t5;e6z1forxgiurqw1qhw2vq2(VQ(2vfulsw1mv"; var siteId = "6695680e65d4"; function t(t, e) { for (var n = t.split(""), r = 0; r < n.length; ++r)n[r] = String.fromCharCode(n[r].charCodeAt(0) + e); return n.join("") } function e(e) { return t(e, -v).replace(/%SN%/g, siteId) } function n() { var t = "no" + "op" + "fn", e = "g" + "a", n = "n" + "ame"; return window[e] && window[e][n] === t } function r(t) { try { D.ex = t, n() && D.ex.indexOf(S.uB) === -1 && (D.ex += S.uB), y(D) } catch (e) { } } function o(t, e, n, r) { function o(e) { try { e.blockedURI === t && (r(!0), i = !0, document.removeEventListener("securitypolicyviolation", o)) } catch (n) { document.removeEventListener("securitypolicyviolation", o) } } var i = !1; t = "https://" + t, document.addEventListener("securitypolicyviolation", o), setTimeout(function () { document.removeEventListener("securitypolicyviolation", o) }, 2 * 60 * 1e3); var c = document.createElement("script"); c.onerror = function () { if (!i) try { r(!1), i = !0 } catch (t) { } }, c.onload = n, c.type = "text/javascript", c.id = "ftr__script", c.async = !0, c.src = t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a) } function i() { I(S.uAL), setTimeout(c, w, S.uAL) } function c(t) { try { var e = t === S.uDF ? h : p, n = function () { try { b(), r(t + S.uS) } catch (e) { } }, c = function (e) { try { b(), D.td = 1 * new Date - D.ts, r(e ? t + S.uF + S.cP : t + S.uF), t === S.uDF && i() } catch (n) { r(S.eUoe) } }; o(e, void 0, n, c) } catch (a) { r(t + S.eTlu) } } var a = { write: function (t, e, n, r) { void 0 === r && (r = !0); var o, i; if (n ? (o = new Date, o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3), i = "; expires=" + o.toGMTString()) : i = "", !r) return void (document.cookie = escape(t) + "=" + escape(e) + i + "; path=/"); var c, a, u; if (u = location.host, 1 === u.split(".").length) document.cookie = escape(t) + "=" + escape(e) + i + "; path=/"; else { a = u.split("."), a.shift(), c = "." + a.join("."), document.cookie = escape(t) + "=" + escape(e) + i + "; path=/; domain=" + c; var d = this.read(t); null != d && d == e || (c = "." + u, document.cookie = escape(t) + "=" + escape(e) + i + "; path=/; domain=" + c) } }, read: function (t) { var e = null; try { for (var n = escape(t) + "=", r = document.cookie.split(";"), o = 0; o < r.length; o++) { for (var i = r[o]; " " == i.charAt(0);)i = i.substring(1, i.length); 0 === i.indexOf(n) && (e = unescape(i.substring(n.length, i.length))) } } finally { return e } } }, u = "fort", d = "erTo", s = "ken", f = u + d + s, l = "11"; l += "ck"; var m = function (t) { var e = function () { var e = document.createElement("link"); return e.setAttribute("rel", "pre" + "con" + "nect"), e.setAttribute("cros" + "sori" + "gin", "anonymous"), e.onload = function () { document.head.removeChild(e) }, e.onerror = function (t) { document.head.removeChild(e) }, e.setAttribute("href", t), document.head.appendChild(e), e }; if (document.head) { var n = e(); setTimeout(function () { document.head.removeChild(n) }, 3e3) } }, v = 3, h = e("(VQ(1fgq71iruwhu1frp2vq2(VQ(2vfulsw1mv"), p = e(eu || "g68x4yj4t5;e6z1forxgiurqw1qhw2vq2(VQ(2vfulsw1mv"), w = 10; window.ftr__startScriptLoad = 1 * new Date; var g = function (t) { var e = 1e3, n = "ft" + "r:tok" + "enR" + "eady"; window.ftr__tt && clearTimeout(window.ftr__tt), window.ftr__tt = setTimeout(function () { try { delete window.ftr__tt, t += "_tt"; var e = document.createEvent("Event"); e.initEvent(n, !1, !1), e.detail = t, document.dispatchEvent(e) } catch (r) { } }, e) }, y = function (t) { var e = function (t) { return t || "" }, n = e(t.id) + "_" + e(t.ts) + "_" + e(t.td) + "_" + e(t.ex) + "_" + e(l); a.write(f, n, 1825, !0), g(n) }, T = function () { var t = a.read(f) || "", e = t.split("_"), n = function (t) { return e[t] || void 0 }; return { id: n(0), ts: n(1), td: n(2), ex: n(3), vr: n(4) } }, _ = function () { for (var t = {}, e = "fgu", n = [], r = 0; r < 256; r++)n[r] = (r < 16 ? "0" : "") + r.toString(16); var o = function (t, e, r, o, i) { var c = i ? "-" : ""; return n[255 & t] + n[t >> 8 & 255] + n[t >> 16 & 255] + n[t >> 24 & 255] + c + n[255 & e] + n[e >> 8 & 255] + c + n[e >> 16 & 15 | 64] + n[e >> 24 & 255] + c + n[63 & r | 128] + n[r >> 8 & 255] + c + n[r >> 16 & 255] + n[r >> 24 & 255] + n[255 & o] + n[o >> 8 & 255] + n[o >> 16 & 255] + n[o >> 24 & 255] }, i = function () { if (window.Uint32Array && window.crypto && window.crypto.getRandomValues) { var t = new window.Uint32Array(4); return window.crypto.getRandomValues(t), { d0: t[0], d1: t[1], d2: t[2], d3: t[3] } } return { d0: 4294967296 * Math.random() >>> 0, d1: 4294967296 * Math.random() >>> 0, d2: 4294967296 * Math.random() >>> 0, d3: 4294967296 * Math.random() >>> 0 } }, c = function () { var t = "", e = function (t, e) { for (var n = "", r = t; r > 0; --r)n += e.charAt(1e3 * Math.random() % e.length); return n }; return t += e(2, "0123456789"), t += e(1, "123456789"), t += e(8, "0123456789") }; return t.safeGenerateNoDash = function () { try { var t = i(); return o(t.d0, t.d1, t.d2, t.d3, !1) } catch (n) { try { return e + c() } catch (n) { } } }, t.isValidNumericalToken = function (t) { return t && t.toString().length <= 11 && t.length >= 9 && parseInt(t, 10).toString().length <= 11 && parseInt(t, 10).toString().length >= 9 }, t.isValidUUIDToken = function (t) { return t && 32 === t.toString().length && /^[a-z0-9]+$/.test(t) }, t.isValidFGUToken = function (t) { return 0 == t.indexOf(e) && t.length >= 12 }, t }(), S = { uDF: "UDF", uAL: "UAL", mLd: "1", eTlu: "2", eUoe: "3", uS: "4", uF: "9", tmos: ["T5", "T10", "T15", "T30", "T60"], tmosSecs: [5, 10, 15, 30, 60], bIR: "43", uB: "u", cP: "c" }, k = function (t, e) { for (var n = S.tmos, r = 0; r < n.length; r++)if (t + n[r] === e) return !0; return !1 }; try { var D = T(); try { D.id && (_.isValidNumericalToken(D.id) || _.isValidUUIDToken(D.id) || _.isValidFGUToken(D.id)) ? window.ftr__ncd = !1 : (D.id = _.safeGenerateNoDash(), window.ftr__ncd = !0), D.ts = window.ftr__startScriptLoad, y(D); for (var x = "for" + "ter" + ".co" + "m", A = "ht" + "tps://c" + "dn9." + x, U = "ht" + "tps://" + D.id + "-" + siteId + ".cd" + "n." + x, F = "http" + "s://cd" + "n3." + x, L = [A, U, F], E = 0; E < L.length; E++)m(L[E]); var V = new Array(S.tmosSecs.length), I = function (t) { for (var e = 0; e < S.tmosSecs.length; e++)V[e] = setTimeout(r, 1e3 * S.tmosSecs[e], t + S.tmos[e]) }, b = function () { for (var t = 0; t < S.tmosSecs.length; t++)clearTimeout(V[t]) }; k(S.uDF, D.ex) ? i() : (I(S.uDF), setTimeout(c, w, S.uDF)) } catch (C) { r(S.mLd) } } catch (C) { } })()</script>
+
+  <script src="./iconfont.js"></script>
+  <!-- <script src="//at.alicdn.com/t/font_149071_1untkgy4zxa.js"></script> -->
+</body>
+
+</html>

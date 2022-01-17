@@ -1,0 +1,56 @@
+@import "../commt.scss";
+.box {
+	color: #0d0d0d;
+	.title {
+		line-height: 1;
+		font-weight: bold;
+		font-size: r(14);
+		margin-bottom: r(10);
+	}
+}
+.uls {
+	display: flex;
+	flex-flow: row wrap;
+	line-height: 1.6;
+	li {
+		transition: all 0.1s ease-in 0s;
+		cursor: pointer;
+		align-items: center;
+		height: r(50);
+		width: 48.5%;
+		border: 1px solid transparent;
+		box-sizing: border-box;
+		margin-bottom: r(10);
+		background-color: #f1f1f1;
+		padding: r(6);
+		font-size: r(12);
+		&:hover {
+			background-color: #e9e9e9;
+			box-shadow: #dedede 1px 1px 1px 0px;
+		}
+	}
+	.num_1,.num_3,.num_5,.num_7,.num_9,.num_11{
+		margin-left: 2.9%;
+	}
+	.active {
+		border: 2px solid #615f5f;
+		box-shadow: #dedede 1px 1px 1px 0px;
+	}
+}
+@media (min-width: 750px) {//PC
+	.box {
+		.uls{
+			li {
+				width: 32.2%;
+			}
+			.num_1,.num_3,.num_5,.num_7,.num_9,.num_11{
+				margin-left: 0;
+			}
+			.num_1,.num_4,.num_7,.num_10{
+				margin: 0 1.6%;
+			}
+		}
+	}
+}
+
+

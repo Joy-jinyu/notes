@@ -1,0 +1,54 @@
+@import "../../commt.scss";
+@import "../../../onepage_ui/App.module.scss";
+
+.closebillingAddress {
+  max-height: 0;
+  opacity: 0;
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.billingTitle{
+  font-size: r(14);
+  font-weight: 500;
+  .billingTitleTop{
+    font-size: r(14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title_{
+    color: #0D0D0D;
+    font-weight: 700;
+  }
+  .option{
+    color: #000;
+    font-size: r(12);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.itemText{
+  color: #666;
+  padding: r(10);
+  margin-top: r(10);
+  margin-bottom: r(10);
+  background-color: #F2F2F2;
+
+}
+.tipText{
+  color: #999;
+  line-height: 1.5;
+}
+.inputParent{
+  margin: 0 r(-7);
+}
+@media screen and (max-width: 750px) {
+  .billingTitle{
+    font-size: r(12);
+  }
+  .tipText{
+    font-size: r(12);
+  }
+}

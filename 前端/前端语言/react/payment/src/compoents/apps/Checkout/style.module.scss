@@ -1,0 +1,153 @@
+@import "../../commt.scss";
+@import "../../../onepage_ui/App.module.scss";
+.collapseTMain{
+  background-color: transparent;
+  padding-left: r(20);
+}
+.textBox{
+    text-align: center;
+    font-size: r(15);
+}
+.card_icon{
+    width: r(24);
+    height: r(24);
+}
+.card_box {
+  margin: 0 r(-6);
+  box-sizing: border-box;
+  min-height: r(117);
+  position: relative;
+  iframe {
+    box-sizing: border-box;
+    color: #00112c;
+    caret-color: #06f;
+    font-size: 1em;
+    font-family: inherit;
+    height: r(43) !important;
+    background: #fff !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: r(6);
+    padding: r(5) r(33) !important;
+    position: relative;
+    outline: none;
+    width: 100%;
+    -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+    transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+    // &:focus,
+    // &:hover {
+    //   border: 1px solid $theme !important;
+    //   box-shadow: $theme 0 0 0 1px !important;
+    // }
+  }
+  .cardNumber,
+  .expiryDate,
+  .cvc {
+    position: relative;
+    display: block;
+  }
+  .icon_box {
+    position: absolute;
+    right: 0;
+    top: r(15);
+    display: flex;
+    align-items: center;
+    padding: 0 r(8);
+  }
+  .card_img_box{
+    height: r(55);
+    position: absolute;
+    left: r(4);
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+  .card_img {
+    margin: 0 r(8);
+    display: flex;
+    align-items: center;
+  }
+  .errortext {
+    color: $error;
+    padding: 0 0.43em;
+  }
+  .error iframe {
+    border: 1px solid $error !important;
+    box-shadow: $error 0 0 0 1px !important;
+  }
+  .card_bottom {
+    display: flex;
+    margin-top: r(2);
+    label {
+      flex: 1;
+    }
+  }
+}
+.svgLock {
+  cursor: pointer;
+  text-transform: none;
+  background-color: transparent;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+.explainBox {
+  padding: 0;
+  display: flex;
+}
+.inputBox{
+  padding: 0.43em;
+    box-sizing: border-box;
+    font-size: r(14);
+    line-height: 1.3em;
+    overflow: hidden;
+    min-height: r(55);
+}
+.cardNumber{
+  input::-webkit-input-placeholder{
+    color: #a5a5a5;
+  }
+}
+// ._rtl{
+//   .cardNumber,
+//   .cvc {
+//     iframe {
+//       padding-left: 58px !important;
+//     }
+//   }
+// }
+
+.angle iframe,.appTheme iframe {//直角组题
+  border-radius: 0;
+  border: none;
+}
+
+.angle .collapseTMain,.appTheme .collapseTMain {//直角组题
+  padding-left: r(31);
+}
+.angle iframe,.appTheme iframe {//直角组题
+  border-radius: 0;
+  border: none;
+}
+
+@media screen and (max-width: 750px) {
+  .collapseTMain{
+    padding: 0;
+  }
+  .angle .collapseTMain,.appTheme .collapseTMain {//直角组题
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 750px) {//只在电脑端加，手机端加上后显示有bug，边框显示不全
+  .card_box iframe {
+    &:focus,
+    &:hover {
+      border: 1px solid $theme !important;
+      box-shadow: $theme 0 0 0 1px !important;
+    }
+  }
+}
+.billingAddress{
+  padding: 0 r(10);
+}

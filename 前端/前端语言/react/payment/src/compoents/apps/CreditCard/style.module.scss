@@ -1,0 +1,52 @@
+@import "../../commt.scss";
+@import "../../../onepage_ui/App.module.scss";
+
+
+.CreditCard {
+  background-color: transparent;
+  // transition: all 0.1s ease-in 0s;
+  box-sizing: border-box;
+  color: rgb(84, 84, 84);
+  font-size: r(14);
+  line-height: 1.5em;
+  margin: 0 r(-6);
+  padding-bottom: r(15);
+  .inputParent {
+    box-sizing: border-box;
+    max-height: r(530);
+    opacity: 1;
+    transition: background-color 0.1s ease-in 0s;
+  }
+  .payVia {
+    display: flex;
+    align-items: center;
+    padding: r(10) r(15) 0;
+    justify-content: center;
+    // margin-bottom: 5px;
+    font-size: r(15);
+    font-weight: bold;
+    background-color: transparent;
+    cursor: default;
+    > img {
+      margin-left: r(5);
+      width: r(69);
+      height: r(13);
+    }
+  }
+  .closebillingAddress {
+    max-height: 0;
+    opacity: 0;
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+.closebillingAddress {
+  max-height: 0;
+  opacity: 0;
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

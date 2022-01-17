@@ -1,0 +1,204 @@
+@import "../../commt.scss";
+
+.card_box {
+    box-sizing: border-box;
+
+    input {
+        box-sizing: border-box;
+        color: #00112c;
+        caret-color: #06f;
+        font-size: 1em;
+        font-family: inherit;
+        height: r(43);
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: r(6);
+        padding: r(5) r(8);
+        position: relative;
+        outline: none;
+        width: 100%;
+        -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+        transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+        -webkit-appearance: none;
+    }
+
+    .cardNumber,
+    .expiryDate,
+    .cvc {
+        padding: 0.43em;
+        display: block;
+        position: relative;
+        > input {
+            padding: 0 r(36);
+        }
+    }
+    .icon_box {
+        line-height: 1;
+        box-sizing: border-box;
+        height: r(43);
+        position: absolute;
+        right: r(7);
+        top: r(6);
+        display: flex;
+        align-items: center;
+        padding: r(2);
+    }
+
+    .card_img_box {
+        line-height: 1;
+        height: r(43);
+        position: absolute;
+        left: r(10);
+        top: r(6);
+        display: flex;
+        align-items: center;
+    }
+    .card_img {
+        width: r(23);
+        height: r(15);
+        margin: 0 r(3);
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .errortext {
+        line-height: 1;
+        color: $error;
+    }
+    .errortextExpiry{
+        box-sizing: border-box;
+        padding: 0 r(6) r(10);
+    }
+    .error > input{
+        border: 1px solid $error;
+        box-shadow: $error 0 0 0 1px;
+    }
+
+    .card_item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: r(3);
+        label {
+            flex: 1;
+        }
+        .title{
+            line-height: 1;
+            font-size:r(12);
+            padding: 0 r(6);
+            display: flex;
+            align-items: center;
+        }
+    }
+    .expiry_box{
+        display:flex;
+    }
+}
+.card_icon {
+    width: r(24);
+    height: r(24);
+}
+.clearBox {
+    padding: r(8);
+}
+.svgLock {
+    line-height: initial;
+    cursor: pointer;
+    text-transform: none;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+
+    // >svg {
+    //     color: #919191;
+    //     fill: currentColor;
+    //     width: 15px;
+    //     height: 16px;
+    //     margin-right: 0 !important;
+    // }
+}
+
+.explainBox {
+    padding: 0;
+    display: flex;
+}
+
+._rtl {
+    .icon_box {
+        left: r(7);
+        right: auto;
+    }
+    .card_img_box {
+        right: r(7);
+        left: auto;
+    }
+    input {
+        direction: initial;
+        text-align: right;
+    }
+    .cardNumber,
+    .expiryDate,
+    .cvc {
+        > input {
+            padding: 0 r(36);
+        }
+    }
+}
+.textBox {
+    text-align: center;
+    font-size: r(15);
+}
+
+.pay-form {
+    text-align: left;
+
+    strong {
+        color: #ff8479;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.angle,
+.appTheme {
+    padding: 0;
+    input {
+        border-radius: 0;
+    }
+}
+
+.card_mobile_box {
+    padding-top: 1.2em;
+}
+
+@media (min-width: 750px) {
+    .clearBox {
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .card_box {
+        input {
+            &:focus {
+                border: 1px solid $theme;
+                box-shadow: $theme 0 0 0 1px;
+            }
+        }
+    }
+    .cardNumber,
+    .expiryDate,
+    .cvc {
+        > input {
+            &:hover {
+                border: 1px solid $theme;
+                box-shadow: $theme 0 0 0 1px;
+            }
+        }
+    }
+}

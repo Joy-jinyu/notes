@@ -1,0 +1,105 @@
+@import "../../commt.scss";
+.cardLogo {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  > span {
+    display: flex;
+    align-items: center;
+    width: r(58);
+    height: r(36);
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-right: 0.3125rem;
+    margin-bottom: r(5);
+    padding: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-radius: r(3);
+    overflow: hidden;
+
+    img {
+      box-sizing: border-box;
+      // height: 100%;
+      padding: r(1) 0;
+      width: 95%;
+      border-radius: r(3);
+      image-rendering: -webkit-optimize-contrast; /*Webkit (non-standard naming) */
+    }
+  }
+}
+.fast_pay_pal {
+  width: r(96);
+  height: r(40);
+  margin: 0;
+}
+.pic {
+  font-size: 0;
+  span {
+    display: inline-block;
+    margin: 0 r(16) 0 r(3);
+    height: r(40);
+    &:last-child{
+        margin: 0 r(3);
+    }
+  }
+  .pic_item {
+    width: r(80);
+    height: 100%;
+  }
+}
+.prominent {
+  border: 1px solid #bbb;
+}
+.cardLogo>.mada_card {
+  width: r(76);
+  border: 1px solid #e5e5e5;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 31rem) {
+  .cardLogoMore::after {
+    content: " ...";
+    color: grey;
+  }
+  .cardLogoMore > span {
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+  .cardLogo > .fast_pay_pal {
+    padding: r(1);
+    width: r(70);
+    height: r(30);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cardLogo {
+    border: none;
+    > span {
+      width: r(45);
+      height: r(28);
+    }
+    .mada_card {
+      width: r(57);
+    }
+  }
+  .pic {
+    span {
+      height: r(32);
+    }
+    .pic_item {
+      width: r(64);
+    }
+  }
+}

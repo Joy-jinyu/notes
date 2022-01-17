@@ -1,0 +1,73 @@
+@import "../commt.scss";
+.box {
+  display: flex;
+  align-items: center;
+  // white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: r(14);
+  line-height: 1em;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  >span{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    opacity: 0.74;
+    vertical-align: text-top;
+    user-select: none;
+    padding: 0 r(5);
+  }
+}
+
+form:focus-within{
+  .box{
+    // border: 1px solid $theme;
+    // box-shadow: $theme 0 0 0 1px;
+    border-radius: r(4);
+  }
+}
+.checkbox {
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  vertical-align: -0.25rem;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: r(4);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a5a5a5;
+  border-image: initial;
+  transition: all 0.2s ease-in-out 0s;
+  margin: 0;
+  &::after{
+    box-sizing: content-box;
+    content: "";
+    border: r(2) solid #fff;
+    border-left: 0;
+    border-top: 0;
+    height: r(8);
+    left: r(5);
+    position: absolute;
+    top: 1px;
+    -ms-transform: rotate(45deg) scaleY(0);
+    transform: rotate(45deg) scaleY(0);
+    width: r(4);
+    transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    border-radius: 1px;
+  }
+}
+.ischecked{
+  background-color: $theme;
+  border-color: $theme;
+  &::after{
+    -ms-transform: rotate(45deg) scaleY(1);
+    transform: rotate(45deg) scaleY(1);
+  }
+}

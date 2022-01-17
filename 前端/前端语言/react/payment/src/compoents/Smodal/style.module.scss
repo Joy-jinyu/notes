@@ -1,0 +1,91 @@
+@import "../commt.scss";
+.mask{
+    background-color: rgba(0,0,0,.45);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.2s;
+}
+.wrap{
+    transition: all 0.2s;
+    z-index: 1001;
+    -webkit-overflow-scrolling: touch;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    transition: all 0.2s;
+    padding: r(20);
+    box-sizing: border-box;
+    background-color: #fff;
+    width: r(460);
+    max-width: 95vw;
+    transform-origin: r(150) r(117);
+    border-radius: r(4);
+    .btnBox{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    // flex-direction: column;
+    }
+    button{
+        font-size: r(14);
+        margin: r(12);
+        border-radius: r(23);
+        width: r(300);
+    }
+    .columnBtn{
+        flex-direction: column;
+        button{
+            margin: r(10) 0;
+            width: 100%;
+        }
+        
+    }
+}
+.titleStyle{
+    font-weight: 600;
+    font-size:r(17);
+    color: #1f2d3d;
+    text-align: center;
+    margin-bottom: r(5);
+}
+.bodyStyle{
+    margin-bottom: r(10);
+    line-height: 1.4;
+    text-align: center;
+}
+.confirmBox{
+    padding: r(28) r(48) r(36);
+    button{
+        width: r(140);
+    }
+}
+@media (max-width: 750px){
+    .modal{
+        width: r(300);
+        button{
+            margin: r(6);
+            width: r(255);
+        }
+    }
+    .confirmBox{
+        padding: r(24);
+        padding: r(24) r(24) r(18);
+        button{
+            width: r(122);
+        }
+    }
+}

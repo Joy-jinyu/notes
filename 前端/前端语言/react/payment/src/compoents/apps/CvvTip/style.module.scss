@@ -1,0 +1,77 @@
+@import "../../commt.scss";
+.pay-form{
+    text-align: left;
+    width: r(450);
+    max-width: 90vw;
+    strong{
+        color: #ff8479;
+    }
+    img{
+        max-width: 100%;
+        max-width: 100%;
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+.card_icon{
+    width: r(24);
+    height: r(24);
+}
+.modalBox{
+    text-align: left;
+    color: #999;
+    width: auto;
+    padding: r(10) 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: r(14);
+    li{
+        box-sizing: border-box;
+        padding: r(10);
+        display: inline-block;
+        width: r(272);
+        list-style: inside;
+        div{
+            padding: 0 r(8);
+        }
+        .tip{
+            padding-bottom: r(16);
+        }
+        .title{
+            padding: 0;
+            font-weight: bold;
+            font-size: r(16);
+            color: #0D0D0D;
+            margin-bottom: r(5);
+        }
+    }
+    img{
+        max-width: r(200);
+        min-width: r(150);
+        min-height: r(95);
+        background-color: #aaa;
+        border-radius: r(6);
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+.modalBoxMo{
+    flex-direction: column;
+    .imgBox{
+        text-align: center;
+    }
+    img{
+        max-width: r(160);
+    }
+}
+.svgLock {
+    line-height: initial;
+    cursor: pointer;
+    text-transform: none;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}

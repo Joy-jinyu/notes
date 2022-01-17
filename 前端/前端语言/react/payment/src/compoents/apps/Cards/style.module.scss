@@ -1,0 +1,130 @@
+@import "../../commt.scss";
+@import "../../../galaxy_ui/App.module.scss";
+.collapseTMain {
+  // transition: all 0.1s ease-in 0s;
+  box-sizing: border-box;
+  color: rgb(84, 84, 84);
+  font-size: r(14);
+  line-height: 1.3em;
+  margin-top: r(-10);
+  .inputParent {
+    box-sizing: border-box;
+    max-height: r(530);
+    opacity: 1;
+    transition: all 0.1s ease-in 0s;
+  }
+  .closebillingAddress {
+    max-height: 0;
+    opacity: 0;
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+.closebillingAddress {
+  max-height: 0;
+  opacity: 0;
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.active {
+  display: block;
+  height: auto;
+  opacity: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.angle .collapseTMain,
+.appTheme .collapseTMain {
+  //直角组题
+  padding-left: r(36);
+}
+.textMain {
+  display: flex;
+  align-items: center;
+  padding-bottom: r(15);
+  font-size: r(14);
+  color: #666;
+  .text {
+    flex: 1;
+    padding: 0 r(10);
+  }
+}
+.EbanxMain {
+  display: inline-block;
+  a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .imgBox {
+    font-style: italic;
+    color: rgb(153, 153, 153);
+    img {
+      height: r(12);
+      width: auto;
+      vertical-align: middle;
+    }
+  }
+}
+.page_icon {
+  width: r(50);
+  height: r(48);
+}
+.rememberCard{
+  margin: r(5) 0 r(10);
+}
+.more{
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .angle .collapseTMain,
+  .appTheme .collapseTMain {
+    //直角组题
+    padding: 0;
+    // margin: 0 r(-6);
+  }
+  .textMain {
+    font-size: r(12);
+    // margin: r(10) 0 0;
+  }
+  .page_icon {
+    width: r(25);
+    height: r(24);
+  }
+}
+.billingAddress {
+  padding: 0 0 r(15);
+}
+.clientIdentityList{
+  display: inline-block;
+  padding-bottom: r(5);
+  min-height: r(120);
+  li{
+    transition: all 0.1s ease-in 0s;
+    padding: r(10) r(0);
+    cursor: pointer;
+    &:hover{
+      border-radius: r(3);
+      background-color:#eee;
+    }
+  }
+  .more{
+    padding: 0;
+  }
+}
+.radiotext{
+  display: flex;
+  align-items: center;
+}
+.cardSicon{
+  margin: 0 r(5);
+  width: r(28);
+  height: r(20);
+}

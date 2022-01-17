@@ -1,0 +1,51 @@
+@import "../../commt.scss";
+@media screen and (min-width: 1100px) {
+}
+.headerAd {
+    font-size: 0;
+    cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
+    .text {
+        box-sizing: border-box;
+        text-align: left;
+        font-weight: 500;
+        color: #000;
+        font-size: 28px;
+        padding: r(10) r(5);
+    }
+}
+.nav{
+    margin-top: r(14);
+}
+.imgBox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img {
+        position: relative;
+        max-width: 100%;
+        min-width: r(130);
+        max-height: r(25);
+        min-height: r(20);
+        box-sizing: border-box;
+        user-select: none;
+        image-rendering: -webkit-optimize-contrast;
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #eee;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .headerAd img {
+        box-sizing: border-box;
+        max-height: r(50);
+        padding: r(12) 0;
+    }
+}

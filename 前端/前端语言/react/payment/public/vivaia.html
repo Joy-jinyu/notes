@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="{{.Language}}" dir="ltr"
+  class="no-js mac chrome desktop page--no-banner page--logo-main page--show page--show card-fields">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+  <meta name="referrer" content="origin">
+  <link rel="dns-prefetch" href="//checkout.starservices.store">
+  <link rel="icon" href="data:;base64,=">
+
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>VIVAIA</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&amp;display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  {{ if .PageFontFamilyUrl }}
+  <link href="{{.PageFontFamilyUrl}}" rel="stylesheet">
+  </link>
+  {{ end }}
+
+
+  <script type="text/javascript">
+    window.shopify_checkouts = window.shopify_checkouts || JSON.parse({{.CombineInfo }});
+  </script>
+
+  <style type="text/css">
+  @font-face {
+    font-family: 'NotoSansJP';
+    font-style: normal;
+    font-display: swap;
+    src: url(%PUBLIC_URL%/fonts/NotoSansJP-Regular.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  
+  @font-face {
+    font-family: 'NotoSansJP';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(%PUBLIC_URL%/fonts/NotoSansJP-Bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  </style>
+
+  {{ if .GoogleGTMId }}
+  <script>
+    (function (w, d, s, l, i) {
+        var shop = window.shopify_checkouts.shop || {};
+        var order = window.shopify_checkouts.order || {};
+        var platform_name=shop.platform_name;
+        var order_domain=order.order_domain;
+        if ((platform_name&&platform_name === 'MIDDLEEAST') && order_domain ) {
+            if(order_domain.includes('m.adorawe')){
+                if(location.host==='m.adorawe.net'){
+                    i='GTM-5989QQ5'
+                }else{
+                    i='GTM-KSNNZKC'
+                }
+            }else if(order_domain.includes('//m.')||order_domain.includes('//m-')){
+                i='GTM-P43BW43'
+            }
+        }
+        //VIVAIA
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', '{{.GoogleGTMId}}');</script>
+    
+  {{ end }}
+    
+</head>
+
+<body>
+  <div id="root">
+    <div class="_spinner_">
+        <div class="spinWrap">
+          <p class="spinnerImage"></p>
+          <p class="loader"></p>
+        </div>
+    </div>
+  </div>
+  <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+
+  <!-- Facebook Pixel Code -->
+  {{ if .FacebookPixelId }}
+  <script type="text/javascript">
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+    try {
+      var __fpids = '{{.FacebookPixelId}}';
+      var __fpidsAr = [];
+      var keys = window.shopify_checkouts && (window.shopify_checkouts.shop.name + "_pixelids_");
+      var cachePixels = window.sessionStorage.getItem(keys);
+      if (cachePixels) {
+        __fpidsAr = cachePixels.split(',');
+      } else {
+        __fpidsAr = __fpids.split(',');
+      }
+
+      for (var i = 0; i < __fpidsAr.length; i++) {
+        fbq('init', __fpidsAr[i]);
+      }
+      fbq('track', 'PageView');
+    } catch (error) {
+      console.log(error);
+    }
+
+  </script>
+  {{ end }}
+
+  </script>
+  {{ if .PaypalClientId }}
+  <script
+    src="https://www.paypal.com/sdk/js?client-id={{.PaypalClientId}}&currency={{.Currency}}&components=messages,buttons&commit=false&locale={{.Locale}}"></script>
+  {{ end }}
+
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {{ if .GoogleAccountId }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{.GoogleAccountId}}"></script>
+  <script type="text/javascript">
+    try {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{.GoogleAccountId}}');
+
+      {{ if .GoogleGAFour}}
+      gtag('config', '{{.GoogleGAFour}}');
+      {{ end }}
+
+      window.setTimeout(function () {
+        if (window.ga) {
+          ga('create', '{{.GoogleAccountId}}', 'auto');
+          ga('send', 'pageview');
+        }
+      }, 800);
+
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+  {{ end }}
+
+
+  <script src="%PUBLIC_URL%/iconfont.js?20211210"></script>
+
+</body>
+{{ if .GoogleGTMId }}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{.GoogleGTMId}}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+{{ end }}
+</html>

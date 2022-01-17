@@ -1,0 +1,32 @@
+@import "../commt.scss";
+.notice {
+    display: flex;
+    opacity: 1;
+    margin: 0.35rem 0;
+    border-radius: r(4);
+    color: #545454;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: r(600);
+    .icon{
+        display: inline-block;
+        overflow: hidden;
+        line-height: r(21);
+        margin-right: r(8);
+        img{
+            max-width: r(17);
+            vertical-align: sub;
+        }
+    }
+    .content{
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-height: 1.5em;
+    }
+}

@@ -1,0 +1,80 @@
+@import "../commt.scss";
+.notice {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0.35rem 0;
+    padding: 1em;
+    border-radius: r(4);
+    border: 1px solid #d3e7f5;
+    background-color: #eff8ff;
+    color: #545454;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: r(600);
+    >svg{
+        width: r(26);
+        height: r(24);
+        color: #197bbd;
+    }
+    .gantanhao {
+        fill: currentColor;
+        box-sizing: border-box;
+    }
+    .content{
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-height: 1.5em;
+        margin: 0 0.7142857143em;
+    }
+}
+.mobile{
+    margin: 0;
+    border-radius: 0;
+    padding: r(5) r(14);
+    >svg{
+        width: r(16);
+        height: r(16);
+    }
+    .gantanhao {
+        width: r(16);
+        height: r(16);
+    }
+}
+.show{
+    max-height: 0;
+    opacity: 0.6;
+    padding: 0 1em;
+    margin: 0;
+    border: none;
+}
+.error {
+    border-color: #fad9d9;
+    background-color: #ffebeb;
+    >svg {
+        color: $error;
+    }
+}
+.notice .guanbi{
+    color:#888;
+    cursor: pointer;
+    &:hover{
+        color: #444;
+    }
+}
+body .modal{
+    font-size: r(15);
+    padding: r(48);
+    text-align: center;
+}
+@media (max-width: 750px){
+    body .modal{
+        padding: r(24);
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../commt.scss";
+@import "../../../onepage_ui/App.module.scss";
+
+.collapseTMain {
+  // transition: all 0.1s ease-in 0s;
+  box-sizing: border-box;
+  color: rgb(84, 84, 84);
+  font-size: r(14);
+  line-height: 1.5em;
+  // margin-top: -15px;
+  .inputParent {
+    box-sizing: border-box;
+    max-height: r(530);
+    opacity: 1;
+    transition: all 0.1s ease-in 0s;
+  }
+  .closebillingAddress {
+    max-height: 0;
+    opacity: 0;
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+.closebillingAddress {
+  max-height: 0;
+  opacity: 0;
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.active {
+  display: block;
+  height: auto;
+  opacity: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.angle .collapseTMain,.appTheme .collapseTMain {//直角组题
+  padding-left: r(31);
+}
+@media screen and (max-width: 750px) {
+  .angle .collapseTMain,.appTheme .collapseTMain {//直角组题
+    padding-left: 0;
+  }
+}

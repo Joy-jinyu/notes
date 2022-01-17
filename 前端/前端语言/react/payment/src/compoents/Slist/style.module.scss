@@ -1,0 +1,33 @@
+@import "../commt.scss";
+.box {
+	border: 1px solid rgb(217, 217, 217);
+	border-radius: 4px;
+	margin: 0px 0.35rem;
+	padding: 0 1.14286rem;
+	box-sizing: border-box;
+	li{
+		display: flex;
+		align-items: center;
+		padding: r(10) 0;
+		border-bottom: 1px solid #e6e6e6;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	.title {
+		color: #737373;
+		width: r(75);
+	}
+	.content {
+		flex: 1;
+		padding-right: 1.14286em;
+		overflow: auto;
+	}
+	.change{
+		// font-size: 0.85714em;
+		padding-left: r(3);
+		cursor: pointer;
+		color: #006eff;
+		transition: color 0.2s ease-in-out;
+	}
+}

@@ -1,0 +1,21 @@
+@import "../../commt.scss";
+@import "../CardBox/style.module.scss";
+.EbanxMain{
+  margin-top: r(-10);
+  padding: 0 r(20) r(10);
+  font-size: r(12);
+  >div{
+    display:inline-block;
+  }
+  a{
+    color: rgb(128, 128, 128);
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+  }
+  .imgBox{
+    font-style: italic; color: rgb(153, 153, 153);
+    img{
+      height: r(12); width: auto; vertical-align: text-top;
+    }
+  }
+}

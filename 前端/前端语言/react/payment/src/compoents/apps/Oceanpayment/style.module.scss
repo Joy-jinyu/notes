@@ -1,0 +1,19 @@
+@import "../../commt.scss";
+
+.Oceanpayment {
+  margin: 0 1px;
+
+  iframe {
+    background-color: transparent;
+    border: none;
+    min-height: r(395);
+  }
+
+  .tryIt {
+    display: flex;
+    min-height: r(100);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}

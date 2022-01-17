@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="https://cdn.shopify.com/s/files/1/0105/1705/3502/files/l_32x32.png?v=1576045696" /> -->
+  <meta name="viewport"
+    content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Shopify Checkout" />
+  <link rel="icon" href="data:;base64,=">
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>VIVAIA</title>
+  <link rel="stylesheet" href="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.8.1/adyen.css"
+    integrity="sha384-y1lKqffK5z+ENzddmGIfP3bcMRobxkjDt/9lyPAvV9H3JXbJYxCSD6L8TdyRMCGM" crossorigin="anonymous">
+  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js"></script>
+  <script>
+    // init vConsole
+    var vConsole = new VConsole();
+  </script>
+  <link rel="preload" href="https://js.stripe.com/v3/" as="script">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <!-- <link rel="preload" href="http://static.vivaiacollection-pc.com.release.fpm.testsdlk.com/static/vivaia/fonts/Lato/Lato-Regular.ttf" as="font" crossorigin="">
+  <link rel="preload" href="http://static.vivaiacollection-pc.com.release.fpm.testsdlk.com/static/vivaia/fonts/Lato/Lato-Bold.ttf" as="font" crossorigin=""> -->
+  
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TNFFV79');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+  <div id="root">
+    <div class="_spinner_">
+        <div class="spinWrap">
+          <p class="spinnerImage"></p>
+          <p class="loader"></p>
+        </div>
+    </div>
+  </div>
+  <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=Ad-nK7JeYsP0Kb4q4wyqVnaSzNJE3FWkuqV2ZdzdMsSwEdr4Xcrgb3mVpMp8_ErAHkMt0QJ3LXxv0fNn&components=messages,buttons&commit=false"></script>
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE4JN4S8RQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RE4JN4S8RQ');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '556300582470975');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=556300582470975&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLF-k5W1SHFHbLCpihVwab6PbTYmCnLNc&libraries=places"></script>
+  <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLF-k5W1SHFHbLCpihVwab6PbTYmCnLNc&libraries=places"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{.GoogleAccountId}}');
+  </script> -->
+  <script type="text/javascript">
+window.shopify_checkouts = JSON.parse("{\"order\":{\"uuid\":\"fbec369e-3769-4cae-b533-0ce1b1b95dfc\",\"total_price\":61.91,\"total_tax\":0,\"total_quantity\":1,\"total_discount\":0,\"items\":[{\"price\":49.91,\"product_id\":33651,\"quantity\":1,\"sku\":\"PKJD00429001\",\"title\":\"12\",\"variant_id\":33651,\"variant_title\":\"12\",\"url\":\"http://vivaiacollection.com.shop.testsdlk.com/item/12-p_33651.html\",\"image\":\"http://cdnimg.vivaiacollection.com/vivaia//products/1616737991-e235209e-5353-4077-b153-9168fe2f4dba.jpg\",\"original_price\":49.91,\"discounted_price\":0,\"line_price\":49.91,\"original_line_price\":49.91,\"total_discount\":0,\"gift_card\":false,\"final_price\":49.91,\"final_line_price\":49.91,\"goods_attr\":\"ZEBRA PATTERN/S\"}],\"shopIdentityCode\":\"\",\"currency\":\"USD\",\"items_subtotal_price\":49.91,\"platform_draft_order_id\":0,\"status\":\"\",\"order_status_url\":\"http://api.vivaiacollection-api.com.release.fpm.testsdlk.com/v1_18/paybck/payment-redirect?data=G0z14SWNr%2BYA0l91TcBWeNQvMTBv9u%2BveNDOvTl%2FJWkDQKGW18ojVBN7A%2BkXfh1PLSN5shjrJADKNsEF2MwAKJm8%2FVCUq8i4wDduzAyq6VePpH27J7K19pOgaycu0j4xRg2Kd%2BQ9sZkI45dyyXr57CsyDVnJqeN3Bt%2BprT18PwU%3D\\u0026is_app=0\",\"discountCode\":\"\",\"discountAmount\":0,\"orderId\":10002829,\"orderNumber\":\"GBM2112261848478714\",\"gifSku\":null,\"discounts\":null,\"free_shipping_methods\":\"\",\"original_total_price\":49.91,\"address\":{\"address1\":\"Rua Piscicultura 564\",\"address2\":\"\",\"city\":\"Tabuk\",\"company\":\"\",\"country\":\"SA\",\"country_name\":\"Saudi Arabia\",\"first_name\":\"Rodrigo\",\"last_name\":\"Carvalho\",\"latitude\":0,\"longitude\":0,\"name\":\"Rodrigo Carvalho\",\"phone\":\"567890123\",\"province\":\"\",\"postal_code\":\"69312-410\",\"province_name\":\"Tabuk\",\"can_changed\":false},\"shipping_rate_id\":1,\"shipping_child_id\":0,\"email\":\"test727@gmail.com\",\"isPay\":false,\"special_zero\":false,\"payment_method\":\"Checkout\",\"ui_version\":\"vivaia\",\"payment_url\":\"\",\"shippingMethods\":[{\"id\":1,\"methodName\":\"Express Shipping\",\"price\":\"12.00\",\"originPrice\":\"0.00\",\"describe\":\"1 ~ 99 business days\"}],\"b_address\":null,\"language\":\"en\",\"cpf\":\"\",\"payment_gate_way\":\"apple_pay\",\"payDiscounts\":null,\"expiredAt\":258906,\"trans_id\":\"263151173844869120\",\"base_total_price\":61.91,\"is_support\":true,\"groupGateway\":[{\"payMethod\":\"Stripe\",\"payGateWay\":\"apple_pay\",\"publicKey\":\"pk_test_51IjIiJKcw10Zf2AN0OvT8OsngP9wzK5y71ECTmsE9leLGOklV90xuIWphoolPBwPkuehuMelV9zM1BJxpOZ4BLN100tQFszW0A\"}],\"client\":4,\"extras\":null,\"account_login\":\"10001252\",\"order_domain\":\"http://www.vivaiacollection-pc.com.release.fpm.testsdlk.com\",\"return_url\":\"http://www.vivaiacollection-pc.com.release.fpm.testsdlk.com/user/index\"},\"shop\":{\"identity_code\":\"c609pnrhq4c2egqrnu00\",\"domain\":\"checkout-test.starservices.store\",\"logo\":\"https://www.vivaiacollection.com//static/vivaia//img/common/logo_black.png\",\"name\":\"vivaiacollection\",\"csrf_token\":\"7a3c8778-f19d-450e-bafb-70cb9e272ba4\",\"platform\":4,\"platform_name\":\"MIDDLEEAST\",\"font_family\":\"Lato\",\"page_font_family_url\":\"https://fonts.googleapis.com/css2?family=Lato\\u0026display=swap\",\"default_country\":\"US\",\"pay_pal_is_active\":false,\"promotion_is_active\":true,\"mobile_url\":\"http://www.vivaiacollection-pc.com.release.fpm.testsdlk.com/user/index\",\"pay_pal_credit_is_active\":true},\"error_msg\":\"\"}");
+</script>
+  <!-- <script src="https://js.stripe.com/v3/" id="AppleGooglePay_sdk"></script> -->
+  <!-- <script src="https://x.klarnacdn.net/kp/lib/v1/api.js"></script> -->
+  <script src="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.8.1/adyen.js"
+    integrity="sha384-rGkZxBRhUfCECwNuNrllGf8dOpeUsKTMqczAkphoWMne67C32+na/29lUGT3HVOB" crossorigin="anonymous"
+    async></script>
+  <script src="https://cdn.checkout.com/js/framesv2.min.js" id="checkout"></script>
+
+  <!-- <script type="text/javascript"
+    id="6695680e65d4">(function () { var eu = "g68x4yj4t5;e6z1forxgiurqw1qhw2vq2(VQ(2vfulsw1mv"; var siteId = "6695680e65d4"; function t(t, e) { for (var n = t.split(""), r = 0; r < n.length; ++r)n[r] = String.fromCharCode(n[r].charCodeAt(0) + e); return n.join("") } function e(e) { return t(e, -v).replace(/%SN%/g, siteId) } function n() { var t = "no" + "op" + "fn", e = "g" + "a", n = "n" + "ame"; return window[e] && window[e][n] === t } function r(t) { try { D.ex = t, n() && D.ex.indexOf(S.uB) === -1 && (D.ex += S.uB), y(D) } catch (e) { } } function o(t, e, n, r) { function o(e) { try { e.blockedURI === t && (r(!0), i = !0, document.removeEventListener("securitypolicyviolation", o)) } catch (n) { document.removeEventListener("securitypolicyviolation", o) } } var i = !1; t = "https://" + t, document.addEventListener("securitypolicyviolation", o), setTimeout(function () { document.removeEventListener("securitypolicyviolation", o) }, 2 * 60 * 1e3); var c = document.createElement("script"); c.onerror = function () { if (!i) try { r(!1), i = !0 } catch (t) { } }, c.onload = n, c.type = "text/javascript", c.id = "ftr__script", c.async = !0, c.src = t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a) } function i() { I(S.uAL), setTimeout(c, w, S.uAL) } function c(t) { try { var e = t === S.uDF ? h : p, n = function () { try { b(), r(t + S.uS) } catch (e) { } }, c = function (e) { try { b(), D.td = 1 * new Date - D.ts, r(e ? t + S.uF + S.cP : t + S.uF), t === S.uDF && i() } catch (n) { r(S.eUoe) } }; o(e, void 0, n, c) } catch (a) { r(t + S.eTlu) } } var a = { write: function (t, e, n, r) { void 0 === r && (r = !0); var o, i; if (n ? (o = new Date, o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3), i = "; expires=" + o.toGMTString()) : i = "", !r) return void (document.cookie = escape(t) + "=" + escape(e) + i + "; path=/"); var c, a, u; if (u = location.host, 1 === u.split(".").length) document.cookie = escape(t) + "=" + escape(e) + i + "; path=/"; else { a = u.split("."), a.shift(), c = "." + a.join("."), document.cookie = escape(t) + "=" + escape(e) + i + "; path=/; domain=" + c; var d = this.read(t); null != d && d == e || (c = "." + u, document.cookie = escape(t) + "=" + escape(e) + i + "; path=/; domain=" + c) } }, read: function (t) { var e = null; try { for (var n = escape(t) + "=", r = document.cookie.split(";"), o = 0; o < r.length; o++) { for (var i = r[o]; " " == i.charAt(0);)i = i.substring(1, i.length); 0 === i.indexOf(n) && (e = unescape(i.substring(n.length, i.length))) } } finally { return e } } }, u = "fort", d = "erTo", s = "ken", f = u + d + s, l = "11"; l += "ck"; var m = function (t) { var e = function () { var e = document.createElement("link"); return e.setAttribute("rel", "pre" + "con" + "nect"), e.setAttribute("cros" + "sori" + "gin", "anonymous"), e.onload = function () { document.head.removeChild(e) }, e.onerror = function (t) { document.head.removeChild(e) }, e.setAttribute("href", t), document.head.appendChild(e), e }; if (document.head) { var n = e(); setTimeout(function () { document.head.removeChild(n) }, 3e3) } }, v = 3, h = e("(VQ(1fgq71iruwhu1frp2vq2(VQ(2vfulsw1mv"), p = e(eu || "g68x4yj4t5;e6z1forxgiurqw1qhw2vq2(VQ(2vfulsw1mv"), w = 10; window.ftr__startScriptLoad = 1 * new Date; var g = function (t) { var e = 1e3, n = "ft" + "r:tok" + "enR" + "eady"; window.ftr__tt && clearTimeout(window.ftr__tt), window.ftr__tt = setTimeout(function () { try { delete window.ftr__tt, t += "_tt"; var e = document.createEvent("Event"); e.initEvent(n, !1, !1), e.detail = t, document.dispatchEvent(e) } catch (r) { } }, e) }, y = function (t) { var e = function (t) { return t || "" }, n = e(t.id) + "_" + e(t.ts) + "_" + e(t.td) + "_" + e(t.ex) + "_" + e(l); a.write(f, n, 1825, !0), g(n) }, T = function () { var t = a.read(f) || "", e = t.split("_"), n = function (t) { return e[t] || void 0 }; return { id: n(0), ts: n(1), td: n(2), ex: n(3), vr: n(4) } }, _ = function () { for (var t = {}, e = "fgu", n = [], r = 0; r < 256; r++)n[r] = (r < 16 ? "0" : "") + r.toString(16); var o = function (t, e, r, o, i) { var c = i ? "-" : ""; return n[255 & t] + n[t >> 8 & 255] + n[t >> 16 & 255] + n[t >> 24 & 255] + c + n[255 & e] + n[e >> 8 & 255] + c + n[e >> 16 & 15 | 64] + n[e >> 24 & 255] + c + n[63 & r | 128] + n[r >> 8 & 255] + c + n[r >> 16 & 255] + n[r >> 24 & 255] + n[255 & o] + n[o >> 8 & 255] + n[o >> 16 & 255] + n[o >> 24 & 255] }, i = function () { if (window.Uint32Array && window.crypto && window.crypto.getRandomValues) { var t = new window.Uint32Array(4); return window.crypto.getRandomValues(t), { d0: t[0], d1: t[1], d2: t[2], d3: t[3] } } return { d0: 4294967296 * Math.random() >>> 0, d1: 4294967296 * Math.random() >>> 0, d2: 4294967296 * Math.random() >>> 0, d3: 4294967296 * Math.random() >>> 0 } }, c = function () { var t = "", e = function (t, e) { for (var n = "", r = t; r > 0; --r)n += e.charAt(1e3 * Math.random() % e.length); return n }; return t += e(2, "0123456789"), t += e(1, "123456789"), t += e(8, "0123456789") }; return t.safeGenerateNoDash = function () { try { var t = i(); return o(t.d0, t.d1, t.d2, t.d3, !1) } catch (n) { try { return e + c() } catch (n) { } } }, t.isValidNumericalToken = function (t) { return t && t.toString().length <= 11 && t.length >= 9 && parseInt(t, 10).toString().length <= 11 && parseInt(t, 10).toString().length >= 9 }, t.isValidUUIDToken = function (t) { return t && 32 === t.toString().length && /^[a-z0-9]+$/.test(t) }, t.isValidFGUToken = function (t) { return 0 == t.indexOf(e) && t.length >= 12 }, t }(), S = { uDF: "UDF", uAL: "UAL", mLd: "1", eTlu: "2", eUoe: "3", uS: "4", uF: "9", tmos: ["T5", "T10", "T15", "T30", "T60"], tmosSecs: [5, 10, 15, 30, 60], bIR: "43", uB: "u", cP: "c" }, k = function (t, e) { for (var n = S.tmos, r = 0; r < n.length; r++)if (t + n[r] === e) return !0; return !1 }; try { var D = T(); try { D.id && (_.isValidNumericalToken(D.id) || _.isValidUUIDToken(D.id) || _.isValidFGUToken(D.id)) ? window.ftr__ncd = !1 : (D.id = _.safeGenerateNoDash(), window.ftr__ncd = !0), D.ts = window.ftr__startScriptLoad, y(D); for (var x = "for" + "ter" + ".co" + "m", A = "ht" + "tps://c" + "dn9." + x, U = "ht" + "tps://" + D.id + "-" + siteId + ".cd" + "n." + x, F = "http" + "s://cd" + "n3." + x, L = [A, U, F], E = 0; E < L.length; E++)m(L[E]); var V = new Array(S.tmosSecs.length), I = function (t) { for (var e = 0; e < S.tmosSecs.length; e++)V[e] = setTimeout(r, 1e3 * S.tmosSecs[e], t + S.tmos[e]) }, b = function () { for (var t = 0; t < S.tmosSecs.length; t++)clearTimeout(V[t]) }; k(S.uDF, D.ex) ? i() : (I(S.uDF), setTimeout(c, w, S.uDF)) } catch (C) { r(S.mLd) } } catch (C) { } })()</script> -->
+
+  <script src="./iconfont.js"></script>
+  <!-- <script src="//at.alicdn.com/t/font_149071_v2fzmu9hpm.js"></script> -->
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNFFV79"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</html>

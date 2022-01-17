@@ -1,0 +1,103 @@
+
+$theme:#0D0D0D;//主题色//rgb(162, 107, 37)
+// $theme:#fe5269;//主题色
+$green:rgb(0, 136, 0);//绿主题色
+$error:rgb(227, 44, 43);
+$black:#0D0D0D;
+$bgColor:#fafafa;//目前用于选中支付方式时候的背景色
+$vivaiaTheme: #9f5123;
+// $theme-hover:#385898;
+// $bg:#e9ebee;//常规背景颜色
+// $bg-hover:rgba(0, 0, 0, .05);
+// $black:#1c1e21;//常规字体颜色
+// $gray:#616770;//灰色
+// $borderColor:#dddfe2;//灰色
+@function r($px) {
+  @return $px / 16 + rem;
+}
+.theme{
+  color: $theme;
+};
+.bgColor{
+  background-color: $bgColor;
+}
+
+.width50 {
+  width: 50% !important;
+}
+.flex1{
+  display: flex;
+  flex: 1;
+}
+.cardBox{//用于卡的box
+  border-top: 1px solid #eee;
+  margin: 0 r(16);
+}
+.errorText{
+  margin-top: 3px;
+  transition: all 0.2s ease-out 0s;
+  color: $error;
+}
+.isloading {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: #ccc, $alpha: 0.6);
+  min-height: 192px;
+}
+.collapse {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 5px;
+  // overflow: hidden;开启隐藏 会隐藏掉说明组件浮窗
+  li{
+    &:first-child{
+      .cardBox{
+        border-top: none;
+      }
+    }
+  }
+}
+.angle,.appTheme {//直角组题
+  border-radius: 0;
+  border: none;
+}
+
+.appTheme .cardBox{
+  margin: 0 20px;
+}
+@media screen and (max-width: 800px) {
+  .angle .cardBox,.appTheme .cardBox{//直角组题
+    margin: 0 r(16);
+  }
+}
+.app_btn_icon{
+  width:r(40);
+  margin: 0 r(7);
+}
+.columnScroll {
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+        width: r(4); /*滚动条宽度*/
+        height: r(4); /*滚动条高度*/
+    }
+
+    /*定义滚动条轨道 内阴影+圆角*/
+    ::-webkit-scrollbar-track {
+        border-radius: r(4); /*滚动条的背景区域的圆角*/
+        // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #f2f2f2; /*滚动条的背景颜色*/
+    }
+
+    /*定义滑块 内阴影+圆角*/
+    ::-webkit-scrollbar-thumb {
+        border-radius: r(4); /*滚动条的圆角*/
+        // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #e1e1e1; /*滚动条的背景颜色*/
+    }
+}

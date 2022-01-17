@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="{{.Language}}" dir="ltr"
+  class="no-js mac chrome desktop page--no-banner page--logo-main page--show page--show card-fields">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+  <meta name="referrer" content="origin">
+  <link rel="dns-prefetch" href="//checkout.starservices.store">
+  <link rel="icon" href="data:;base64,=">
+
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>{{.ShopShortDomain}} - Checkout</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&amp;display=swap" rel="stylesheet"> -->
+
+  {{ if .PageFontFamilyUrl }}
+  <link href="{{.PageFontFamilyUrl}}" rel="stylesheet">
+  </link>
+  {{ end }}
+  
+
+<script type="text/javascript">
+    window.shopify_checkouts = window.shopify_checkouts || JSON.parse({{.CombineInfo }});
+  </script>
+    {{ if .GoogleGTMId }}
+    <script>
+    (function (w, d, s, l, i) {
+        var shop = window.shopify_checkouts.shop || {};
+        var order = window.shopify_checkouts.order || {};
+        var platform_name=shop.platform_name;
+        var order_domain=order.order_domain;
+        if ((platform_name&&platform_name === 'MIDDLEEAST') && order_domain ) {
+            if(order_domain.includes('m.adorawe')){
+                if(location.host==='m.adorawe.net'){
+                    i='GTM-5989QQ5'
+                }else{
+                    i='GTM-KSNNZKC'
+                }
+            }else if(order_domain.includes('//m.')||order_domain.includes('//m-')){
+                i='GTM-P43BW43'
+            }
+        }
+        //VIVAIA
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', '{{.GoogleGTMId}}');</script>
+    
+    {{ end }}
+    
+  <!-- {{ if .GoogleGTMId }}
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '{{.GoogleGTMId}}');</script>
+
+  {{ end }} -->
+</head>
+
+<body>
+    <div id="root">
+      <!-- Skeleton -->
+  
+      <style>
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: #eee;
+        }
+        ul, li {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+        p {
+          position: absolute;
+        }
+        ._pc_ {
+          display: none;
+        }
+        .style_box__299g- {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+  }
+  .style_headerTopBox__1NHJb {
+      height: 80px;
+      background-color: #fff;
+      justify-content: center;
+  }
+  .style_skeletonBox__1L_6t {
+      display: flex;
+      height: inherit;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 20px;
+  }
+  .style_skeleton__oBw7P {
+      margin: 5px 0;
+      height: 16px;
+      background: linear-gradient(
+  90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
+      animation-duration: 2s;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+  }
+  .style_left__2i3vY li .style_skeleton__oBw7P {
+      margin: 10px 0;
+  }
+  .style_topBox__1LXoh {
+      height: 64px;
+  }
+  .style_main__2m8H5 {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1200px;
+      box-sizing: border-box;
+  }
+  .style_main__2m8H5 .style_left__2i3vY, .style_main__2m8H5 .style_right__3-uGq {
+      box-sizing: border-box;
+      margin-right: 20px;
+      width: 66%;
+  }
+  .style_main__2m8H5 .style_left__2i3vY .style_title__1B3fF, .style_main__2m8H5 .style_right__3-uGq .style_title__1B3fF {
+      background-color: #fff;
+      height: 61px;
+      border-bottom: 1px solid #eee;
+  }
+  .style_cardBox__1pmeb {
+      background-color: #fff;
+  }
+  .style_cardBox__1pmeb li {
+      height: 118px;
+      padding: 25px 40px 0;
+      flex-direction: column;
+      align-items: initial;
+      border-bottom: 1px solid #eee;
+      box-sizing: border-box;
+  }
+  .style_main__2m8H5 .style_right__3-uGq {
+      margin-right: 0;
+      width: 44%;
+  }
+  .style_rightItem__2GzKt li {
+      height: 77px;
+      padding: 10px 20px;
+  }
+  .style_btnBox__x_idg {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 30px;
+      background-color: #fff;
+  }
+  .style_btnBox__x_idg .style_btn__1Lm5M {
+      margin: 60px auto 20px;
+      width: 370px;
+      height: 50px;
+      background-color: #ddd;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .style_btnBox__x_idg .style_btn__1Lm5M .style_text__yObyj {
+      width: 72px;
+      height: 16px;
+  }
+  .style_pci__1v67r {
+      display: flex;
+      margin: 20px 0;
+      justify-content: center;
+  }
+  .style_pci__1v67r li {
+      margin: 0 20px;
+      width: 65px;
+      height: 35px;
+      background-color: #fff;
+      background: linear-gradient(
+  90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
+  }
+        @media screen and (min-device-width: 750px) {
+          .blink {
+            display: none;
+          }
+  
+          ._pc_ {
+            display: block;
+          }
+        }
+  
+      </style>
+      <div>
+          <style>
+              html, body, p {
+                margin: 0;
+                padding: 0;
+              }
+              html, body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+              }
+              p {
+                position: absolute;
+              }
+            </style><style>
+            @keyframes blink {
+              0% {
+                opacity: .4;
+              }
+      
+              50% {
+                opacity: 1;
+              }
+      
+              100% {
+                opacity: .4;
+              }
+            }
+            .blink {
+              animation-duration: 2s;
+              animation-name: blink;
+              animation-iteration-count: infinite;
+            }
+          </style>
+            
+      <p class="blink" style=" z-index: 0; border-radius: 0% / 0%; background: rgb(238, 238, 238); width: 100%; padding-bottom: 202.029%; margin-top: 0%;"></p>
+      
+      <p class="blink" style=" z-index: 1; border-radius: 1.14% / 1.417%; background: rgb(255, 255, 255); width: 93.6%; padding-bottom: 75.275%; left: 3.2%; margin-top: 17.333%;"></p>
+      
+      <p class="blink" style="
+      z-index: 2;
+      background: #EEEEEE;
+      width: 32.708%;
+      padding-bottom: 3.733%;
+      left: 7.467%;
+      margin-top: 23.6%;"></p>
+      <p class="blink" style="
+      z-index: 3;
+      border-radius: 50%;
+      background: rgb(255, 255, 255);
+      width: 4.8%;
+      padding-bottom: 4.8%;
+      left: 87.733%;
+      margin-top: 27.479%;"></p>
+      <p class="blink" style="
+      z-index: 4;
+      background: #EEEEEE;
+      width: 32.708%;
+      padding-bottom: 3.733%;
+      left: 7.467%;
+      margin-top: 48.692%;"></p>
+      <p class="blink" style="
+      z-index: 5;
+      border-radius: 50%;
+      background: rgb(255, 255, 255);
+      width: 4.8%;
+      padding-bottom: 4.8%;
+      left: 87.733%;
+      margin-top: 52.571%;"></p>
+      <p class="blink" style="
+      z-index: 6;
+      background: #EEEEEE;
+      width: 32.708%;
+      padding-bottom: 3.733%;
+      left: 7.467%;
+      margin-top: 73.783%;"></p>
+      <p class="blink" style="
+      z-index: 7;
+      border-radius: 50%;
+      background: rgb(255, 255, 255);
+      width: 4.8%;
+      padding-bottom: 4.8%;
+      left: 87.733%;
+      margin-top: 77.662%;"></p>
+      <p class="blink" style="
+      z-index: 8;
+      background: #EEEEEE;
+      width: 34.125%;
+      padding-bottom: 3.467%;
+      left: 62.675%;
+      margin-top: 96.342%;"></p>
+      <p class="blink" style="
+      z-index: 9;
+      border-radius: 1.14% / 2.127%;
+      background: rgb(255, 255, 255);
+      width: 93.6%;
+      padding-bottom: 50.158%;
+      left: 3.2%;
+      margin-top: 103.658%;"></p>
+      <p class="blink" style="
+      z-index: 10;
+      background: #EEEEEE;
+      width: 9.184%;
+      padding-bottom: 3.733%;
+      left: 7.467%;
+      margin-top: 108.858%;"></p>
+      <p class="blink" style="
+      z-index: 11;
+      background: #EEEEEE;
+      width: 35.928%;
+      padding-bottom: 3.2%;
+      left: 35.029%;
+      margin-top: 109.392%;"></p>
+      <p class="blink" style="
+      z-index: 12;
+      background: #EEEEEE;
+      width: 21.933%;
+      padding-bottom: 3.2%;
+      left: 7.467%;
+      margin-top: 123.95%;"></p>
+      <p class="blink" style="
+      z-index: 13;
+      background: #EEEEEE;
+      width: 23.929%;
+      padding-bottom: 3.2%;
+      left: 7.467%;
+      margin-top: 129.283%;"></p>
+      <p class="blink" style="
+      z-index: 14;
+      background: #EEEEEE;
+      width: 19.233%;
+      padding-bottom: 3.2%;
+      left: 7.467%;
+      margin-top: 134.617%;"></p>
+      <p class="blink" style="
+      z-index: 15;
+      background: #EEEEEE;
+      width: 15.533%;
+      padding-bottom: 5.333%;
+      left: 75.933%;
+      margin-top: 143.15%;"></p>
+      <p class="blink" style="
+      z-index: 16;
+      background: #EEEEEE;
+      width: 5.435%;
+      padding-bottom: 3.2%;
+      left: 47.281%;
+      margin-top: 167.15%;"></p>
+      <p class="blink" style="
+      z-index: 17;
+      border-radius: 0% / 0%;
+      background: rgb(238, 238, 238);
+      width: 100%;
+      padding-bottom: 18.133%;
+      margin-top: 159.733%;"></p>
+      <p class="blink" style="
+      z-index: 18;
+      border-radius: 28.49% / 208.333%;
+      background: #ddd;
+      width: 93.6%;
+      padding-bottom: 12.8%;
+      left: 3.2%;
+      margin-top: 161.867%;"></p>
+      <p class="blink" style="
+      z-index: 19;
+      background: #EEEEEE;
+      width: 34.546%;
+      padding-bottom: 4.267%;
+      left: 32.727%;
+      margin-top: 166.133%;"></p>
+      <p class="blink" style="
+      z-index: 0;
+      border-radius: 0% / 0%;
+      background: rgb(255, 255, 255);
+      width: 100%;
+      padding-bottom: 12.8%;
+      margin-top: 0%;"></p>
+      <p class="blink" style="
+      z-index: 1;
+      border-radius: 0% / 0%;
+      background: rgb(239, 239, 239);
+      width: 34.667%;
+      padding-bottom: 13.067%;
+      left: 32.667%;
+      margin-top: -0.267%;"></p>
+      </div>
+      <div class="_pc_">
+        <div class="spinWrap">
+          <div class="style_box__299g-"><div class="style_headerTopBox__1NHJb"><div class="style_skeletonBox__1L_6t"><span class="style_skeleton__oBw7P" style="width: 200px;height: 30px;"></span></div></div><div class="style_topBox__1LXoh"><div class="style_skeletonBox__1L_6t"><span class="style_skeleton__oBw7P" style="width: 100px;"></span></div></div><div class="style_main__2m8H5"><div class="style_left__2i3vY"><div class="style_title__1B3fF style_skeletonBox__1L_6t"><span class="style_skeleton__oBw7P" style="width: 200px;"></span></div><ul class="style_cardBox__1pmeb"><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 100px;"></div><div class="style_skeleton__oBw7P" style="width: 150px;"></div></li><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 100px;"></div><div class="style_skeleton__oBw7P" style="width: 150px;"></div></li><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 100px;"></div><div class="style_skeleton__oBw7P" style="width: 150px;"></div></li></ul></div><div class="style_right__3-uGq"><div class="style_title__1B3fF style_skeletonBox__1L_6t"><span class="style_skeleton__oBw7P" style="width: 100px;"></span></div><ul class="style_cardBox__1pmeb style_rightItem__2GzKt"><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 100px;"></div><div class="style_skeleton__oBw7P" style="width: 150px;"></div></li><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 120px;"></div><div class="style_skeleton__oBw7P" style="width: 180px;"></div></li><li class="style_skeletonBox__1L_6t"><div class="style_skeleton__oBw7P" style="width: 130px;"></div><div class="style_skeleton__oBw7P" style="width: 150px;"></div></li></ul><div class="style_btnBox__x_idg"><div class="style_btn__1Lm5M"><div class="style_text__yObyj style_skeleton__oBw7P"></div></div><div class="style_skeletonBox__1L_6t"><span class="style_skeleton__oBw7P" style="width: 100px;"></span></div></div><ul class="style_pci__1v67r"><li></li><li></li><li></li><li></li></ul></div></div></div>
+        </div>
+      </div>
+  
+      <!-- PC Skeleton-->
+  
+    </div>
+      <script>
+        //ar==》rtl
+        if(document.documentElement.lang==='ar'){
+            var _pc_=document.getElementsByClassName('_pc_')[0];
+            if(_pc_){
+                _pc_.style.direction='rtl';
+                _pc_.style['unicode-bidi']='bidi-override';
+                _pc_.style['text-align']='right';
+            }
+        }
+    </script>
+  <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+
+  <!-- Facebook Pixel Code -->
+  {{ if .FacebookPixelId }}
+  <script type="text/javascript">
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+    try {
+      var __fpids = '{{.FacebookPixelId}}';
+      var __fpidsAr = [];
+      var keys = window.shopify_checkouts && (window.shopify_checkouts.shop.name + "_pixelids_");
+      var cachePixels = window.sessionStorage.getItem(keys);
+      if (cachePixels) {
+        __fpidsAr = cachePixels.split(',');
+      } else {
+        __fpidsAr = __fpids.split(',');
+      }
+
+      for (var i = 0; i < __fpidsAr.length; i++) {
+        fbq('init', __fpidsAr[i]);
+      }
+      fbq('track', 'PageView');
+    } catch (error) {
+      console.log(error);
+    }
+
+  </script>
+  {{ end }}
+
+  </script>
+  {{ if .PaypalClientId }}
+  <script
+    src="https://www.paypal.com/sdk/js?client-id={{.PaypalClientId}}&currency={{.Currency}}&components=messages,buttons&commit=false&locale={{.Locale}}"></script>
+  {{ end }}
+
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {{ if .GoogleAccountId }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{.GoogleAccountId}}"></script>
+  <script type="text/javascript">
+    try {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{.GoogleAccountId}}');
+
+      {{ if .GoogleGAFour}}
+      gtag('config', '{{.GoogleGAFour}}');
+      {{ end }}
+
+      window.setTimeout(function () {
+        if (window.ga) {
+          ga('create', '{{.GoogleAccountId}}', 'auto');
+          ga('send', 'pageview');
+        }
+      }, 800);
+
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+  {{ end }}
+
+
+  <script src="%PUBLIC_URL%/iconfont.js?20211210"></script>
+
+</body>
+{{ if .GoogleGTMId }}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{.GoogleGTMId}}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+{{ end }}
+</html>

@@ -1,0 +1,21 @@
+@import "../../commt.scss";
+.NoPayment {
+  text-align: center;
+  width: r(320);
+  padding: r(80) 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  img {
+    width: r(159);
+    height: r(159);
+    margin-bottom: r(10);
+  }
+}
+@media (max-width: 750px) {
+  .NoPayment {
+    img {
+      width: r(120);
+      height: r(120);
+    }
+  }
+}

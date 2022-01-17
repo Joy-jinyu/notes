@@ -1,0 +1,76 @@
+@import "../../commt.scss";
+.box {
+    font-size: r(12);
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    padding: r(20);
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    line-height: 1;
+    .left {
+        > svg {
+            width: r(24);
+            height: r(24);
+        }
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        .right_l{
+            margin: 0 r(20);
+        }
+        .right_l_1 {
+            margin-bottom: r(5);
+            font-size: r(16);
+            font-weight: bold;
+            color: #000;
+        }
+        .right_r{
+            display: flex;
+            text-align: right;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right_r_1{
+            font-size: r(18);
+            font-weight: bold;
+            color: #000;
+        }
+        .Free{
+            color: $vivaiaTheme;
+        }
+        .right_r_2{
+            margin-top: r(5);
+            text-decoration:line-through
+        }
+    }
+}
+
+.isMobile{
+    padding: r(15) 0;
+    border: none;
+    font-size: r(12);
+    color:#000;
+    line-height: 1.4;
+    background-color: transparent;
+    border-bottom: 1px solid #e1e1e1;
+    .left {
+        margin-right: r(15);
+    }
+    .right{
+        .right_l{
+            margin: 0;
+        }
+        .right_r{
+            display:none
+        }
+        .right_l_1{
+            font-size:r(12);
+            font-weight: bold;
+            margin-bottom: r(2);
+        }
+    }
+}
