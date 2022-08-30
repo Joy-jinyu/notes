@@ -24,6 +24,6 @@
     "karma-mocha": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "mocha": "^8.2.1",
-    "vite": "^1.0.0-rc.13"
+    "vite": "^2.9.13"
   }
 }
